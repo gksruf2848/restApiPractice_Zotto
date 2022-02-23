@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.tain.mybatis.mappers.BuildingMapper">
+
+	<!-- select -->
+	<!--
+	id : 서비스에서 호출한 메소드의 이름
+	parameterType : 메소드 호출할 때 불러왔던 파라미터(매개변수)의 타입 (없다면 속성을 없애도 무관)
+	resultType : 쿼리문 실행 후 넘겨주는 값의 타입
+	resultMap : 쿼리문 실행 후 받아온 컬럼의 값을 원하는 곳에 저장하고 싶을 때 사용(type:어떤 타입으로 받아올지, id:어떤 이름으로 받아올지) -->
+	<select id="selectAll" parameterType="CamelMap" resultType="CamelMap">
+		select
+			id
+			, code
+			, name
+			, address
+			, size
+			, desc
+		from
+			tbl_building
+		where 1=1
+		<if test='code != null'>
+			and code = #{code}
+		</if>
+	</select>
+
+</mapper>
