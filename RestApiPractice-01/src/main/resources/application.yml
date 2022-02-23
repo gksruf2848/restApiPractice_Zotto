@@ -164,8 +164,10 @@ proj-env:
     info-path: /json/info
     data-path: /json/data
     
-    base-path: C:\Temp\_LHG\workspace\Test-00\src\main\resources\json
-    building-file:      building.json
+    base-path: C:\Temp\_LHG\git\restApiPractice_Zotto\RestApiPractice-01\src\main\resources\json
+    stud-file:        stud.json
+    lesn-file:        lesn.json
+    stud-lesn-file:   stud_lesn.json
 
   job:
     name: JOB (air)

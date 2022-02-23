@@ -1,0 +1,19 @@
+[
+	{
+		"studCode": "S001",
+		"lesnCode": "L001",
+		"score": "A"
+	},{
+		"studCode": "S001",
+		"lesnCode": "L002",
+		"lesnCnt": 
+	},{
+		"studCode": "S002",
+		"lesnCode": "L002",
+		"lesnCnt": 
+	},{
+		"studCode": "S003",
+		"lesnCode": "L001",
+		"lesnCnt": 
+	}
+]
