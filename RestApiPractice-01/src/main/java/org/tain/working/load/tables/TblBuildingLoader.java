@@ -5,7 +5,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.tain.jpa.domain.TblBuilding;
+import org.tain.jpa.domain.TblStud;
 import org.tain.jpa.repository.TblBuildingRepository;
 import org.tain.tools.properties.ProjEnvParam;
 import org.tain.utils.CurrentInfo;
@@ -37,7 +37,7 @@ public class TblBuildingLoader {
 		if (Boolean.TRUE) {
 			String fileName = this.projEnvParam.getBasePath() + File.separator + this.projEnvParam.getBuildingFile();
 			String jsonData = StringTools.stringFromFile(fileName);
-			List<TblBuilding> lst = new ObjectMapper().readValue(jsonData, new TypeReference<List<TblBuilding>>() {});
+			List<TblStud> lst = new ObjectMapper().readValue(jsonData, new TypeReference<List<TblStud>>() {});
 			lst.forEach(itm -> {
 				itm.setId(id);
 				this.tblBuildingRepository.save(itm);

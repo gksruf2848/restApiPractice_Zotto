@@ -7,9 +7,9 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table(name = "tbl_building")
+@Table(name = "tbl_lesn")
 @Data
-public class TblBuilding {
+public class TblLesn {
 
 	@Id
 	private Long id;
@@ -17,10 +17,4 @@ public class TblBuilding {
 	private String code;
 	
 	private String name;
-	
-	private String address;
-	
-	private Integer size;
-	
-	private String desc;
 }
