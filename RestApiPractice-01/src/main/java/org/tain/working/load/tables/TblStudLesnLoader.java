@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-import org.tain.jpa.domain.TblStud;
-import org.tain.jpa.repository.TblBuildingRepository;
+import org.tain.jpa.domain.TblStudLesn;
+import org.tain.jpa.repository.TblStudLesnRepository;
 import org.tain.tools.properties.ProjEnvParam;
 import org.tain.utils.CurrentInfo;
 import org.tain.utils.StringTools;
@@ -18,29 +18,29 @@ import lombok.extern.slf4j.Slf4j;
 
 @Component
 @Slf4j
-public class TblBuildingLoader {
+public class TblStudLesnLoader {
 
 	@Autowired
 	private ProjEnvParam projEnvParam;
 	
 	@Autowired
-	private TblBuildingRepository tblBuildingRepository;
+	private TblStudLesnRepository tblStudLesnRepository;
 	long id = 1L;
 	
 	public void loading() throws Exception {
-		log.info("HANLIM-20220220 >>>>> {} {}", CurrentInfo.get());
+		log.info("KANG-20210405 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Boolean.TRUE) {
-			this.tblBuildingRepository.deleteAll();
+			this.tblStudLesnRepository.deleteAll();
 		}
 		
 		if (Boolean.TRUE) {
-			String fileName = this.projEnvParam.getBasePath() + File.separator + this.projEnvParam.getBuildingFile();
+			String fileName = this.projEnvParam.getBasePath() + File.separator + this.projEnvParam.getStudLesnFile();
 			String jsonData = StringTools.stringFromFile(fileName);
-			List<TblStud> lst = new ObjectMapper().readValue(jsonData, new TypeReference<List<TblStud>>() {});
+			List<TblStudLesn> lst = new ObjectMapper().readValue(jsonData, new TypeReference<List<TblStudLesn>>() {});
 			lst.forEach(itm -> {
 				itm.setId(id);
-				this.tblBuildingRepository.save(itm);
+				this.tblStudLesnRepository.save(itm);
 				this.id ++;
 			});
 		}
