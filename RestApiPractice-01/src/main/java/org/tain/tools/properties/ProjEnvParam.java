@@ -18,7 +18,9 @@ public class ProjEnvParam {
 	private String dataPath;
 	
 	private String basePath;
-	private String buildingFile;
+	private String studFile;
+	private String lesnFile;
+	private String studLesnFile;
 	
 	private String dummy;  // null
 }
