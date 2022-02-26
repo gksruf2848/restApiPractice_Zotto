@@ -3,7 +3,9 @@ package org.tain.working.load;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.tain.utils.CurrentInfo;
-import org.tain.working.load.tables.TblBuildingLoader;
+import org.tain.working.load.tables.TblLesnLoader;
+import org.tain.working.load.tables.TblStudLesnLoader;
+import org.tain.working.load.tables.TblStudLoader;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -12,21 +14,45 @@ import lombok.extern.slf4j.Slf4j;
 public class LoadWorking {
 
 	public void doing() throws Exception {
-		log.info("KANG-20210405 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Boolean.TRUE) {
-			if (Boolean.TRUE) loadTblBuilding();
+			if (Boolean.TRUE) loadTblStud();
+			if (Boolean.TRUE) loadTblLesn();
+			if (Boolean.TRUE) loadTblStudLesn();
 		}
 	}
 	
 	///////////////////////////////////////////////////////////////////////////
 	
 	@Autowired
-	private TblBuildingLoader tblBuildingLoader;
+	private TblStudLoader tblStudLoader;
 	
-	private void loadTblBuilding() throws Exception {
-		log.info("HANLIM-20220220 >>>>> {} {}", CurrentInfo.get());
+	private void loadTblStud() throws Exception {
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get());
 		
-		if (Boolean.TRUE) this.tblBuildingLoader.loading();
+		if (Boolean.TRUE) this.tblStudLoader.loading();
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+	
+	@Autowired
+	private TblLesnLoader tblLesnLoader;
+	
+	private void loadTblLesn() throws Exception {
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Boolean.TRUE) this.tblLesnLoader.loading();
+	}
+	
+	///////////////////////////////////////////////////////////////////////////
+	
+	@Autowired
+	private TblStudLesnLoader tblStudLesnLoader;
+	
+	private void loadTblStudLesn() throws Exception {
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Boolean.TRUE) this.tblStudLesnLoader.loading();
 	}
 }

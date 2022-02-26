@@ -32,7 +32,7 @@ public class PropertiesWorking {
 	private ProjEnvUrl projEnvUrl;
 	
 	public void doing() throws Exception {
-		log.info("HANLIM-20220220 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Boolean.TRUE) {
 			log.info(">>>>> {} {}", "- BASE --", MonJsonNode.getPrettyJson(this.projEnvBase));

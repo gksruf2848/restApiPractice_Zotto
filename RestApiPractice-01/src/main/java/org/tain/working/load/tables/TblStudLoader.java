@@ -28,7 +28,7 @@ public class TblStudLoader {
 	long id = 1L;
 	
 	public void loading() throws Exception {
-		log.info("KANG-20210405 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Boolean.TRUE) {
 			this.tblStudRepository.deleteAll();
