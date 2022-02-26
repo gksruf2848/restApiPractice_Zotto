@@ -32,7 +32,7 @@ public class FileUploadController {
 	// uploadForm.html
 	@GetMapping(value = {"/files"})
 	public String list(Model model) throws Exception {
-		log.info("KANG-20210405 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get());
 		
 		List<String> lst = this.service.loadAll().map(
 				path -> MvcUriComponentsBuilder.fromMethodName(
@@ -48,7 +48,7 @@ public class FileUploadController {
 	// upload
 	@PostMapping(value = {"/files"})
 	public String fileUpload(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) throws Exception {
-		log.info("KANG-20210405 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get());
 		
 		this.service.store(file);
 		redirectAttributes.addFlashAttribute("message", "You successfully upload [" + file.getOriginalFilename() + "]");
@@ -59,7 +59,7 @@ public class FileUploadController {
 	@GetMapping("/files/{filename:.+}")
 	@ResponseBody
 	public ResponseEntity<Resource> serveFile(@PathVariable String filename) throws Exception {
-		log.info("KANG-20210405 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get());
 		
 		Resource file = this.service.loadAsResource(filename);
 		return ResponseEntity
