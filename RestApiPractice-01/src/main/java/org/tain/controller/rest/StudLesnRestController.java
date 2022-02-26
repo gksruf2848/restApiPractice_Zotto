@@ -31,7 +31,7 @@ public class StudLesnRestController {
 	private StudLesnMapper studLesnMapper;
 	
 	@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST}, maxAge = 3600)
-	@RequestMapping(value = {"/studLesns"}, method = {RequestMethod.GET, RequestMethod.POST})
+	@RequestMapping(value = {"/studlesns"}, method = {RequestMethod.GET, RequestMethod.POST})
 	public ResponseEntity<?> test(HttpEntity<String> reqEntity) throws Exception {
 		String reqBody = null;
 		if (Boolean.TRUE) {
