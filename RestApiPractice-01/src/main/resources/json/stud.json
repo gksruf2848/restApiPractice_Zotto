@@ -1,15 +1,15 @@
 [
 	{
 		"code": "S001",
-		"name": "임한결",
+		"name": "Lim",
 		"grade": "3"
 	},{
 		"code": "S002",
-		"name": "강석",
+		"name": "Kang",
 		"grade": "4"
 	},{
 		"code": "S003",
-		"name": "이현호",
+		"name": "Lee",
 		"grade": "1"
 	}
 ]

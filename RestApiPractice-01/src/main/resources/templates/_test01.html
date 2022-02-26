@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
 	<title>test01.html</title>
 	<!-- download: http://jquery.com/download -->
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -44,18 +43,22 @@
 		$('#btnAction1').on('click', function(event){
 			console.log('btnAction1');
 			$.ajax({
-				url: "/v0.1/rest/studs",
+				url: "/v0.1/rest/custs",
 				method: "POST",
 				contentType: "application/json; charset=utf-8",
-				data: null,
+				data: JSON.stringify({code: 'C003', val: '123'}),
 				dataType: "json",
 				beforeSend: function() {
+					var obj1 = {};
+					obj1.code = $('#in1').val();
+					obj1.val = '123';
+					this.data = JSON.stringify(obj1);
 					console.log('beforeSend... data: ' + this.data);
 				}
 			})
 			.done(function(json) {
 				console.log('done.json: ' + JSON.stringify(json));
-				$('#out1').val(JSON.stringify(json, null, 2));
+				$('#out1').val(JSON.stringify(json));
 			})
 			.fail(function(xhr, status, errorThrown) {
 				alert('ERROR');
@@ -70,10 +73,10 @@
 		$('#btnAction2').on('click', function(event){
 			console.log('btnAction2');
 			$.ajax({
-				url: "/v0.1/rest/lesns",
+				url: "/v0.1/rest/prods",
 				method: "POST",
 				contentType: "application/json; charset=utf-8",
-				data: JSON.stringify({code: 'L001', val: '123'}),
+				data: JSON.stringify({code: 'P003', val: '123'}),
 				dataType: "json",
 				beforeSend: function() {
 					var obj2 = {};
@@ -85,7 +88,7 @@
 			})
 			.done(function(json) {
 				console.log('done.json: ' + JSON.stringify(json));
-				$('#out2').val(JSON.stringify(json, null, 2));
+				$('#out2').val(JSON.stringify(json));
 			})
 			.fail(function(xhr, status, errorThrown) {
 				alert('ERROR');
@@ -100,47 +103,64 @@
 		$('#btnAction3').on('click', function(event){
 			console.log('btnAction3');
 			$.ajax({
-				url: "/v0.1/rest/studlesns",
-				method: "POST",
-				contentType: "application/json; charset=utf-8",
-				data: null,
-				dataType: "json",
+				url: '/v0.1/rest/custprods',
+				type: 'POST',
+				contentType: 'application/json; charset=utf-8',
+				data: JSON.stringify({prodCnt: 10, val: '한글'}),
+				dataType: 'json',
 				beforeSend: function() {
-					console.log('beforeSend... data: ' + this.data);
+					var obj3 = {};
+					obj3.prodCnt = $('#in3').val();
+					obj3.val = '한글';
+					this.data = JSON.stringify(obj3);
+					console.log('beforeSend...: ' + this.data);
+				},
+				success: function(data) {
+					console.log('success.data: ' + JSON.stringify(data));
+					$('#out3').val(JSON.stringify(data, null, 2));
+				},
+				error: function(request, status, error) {
+					console.log('error: ' + status + ': '
+							+ request.status + ': '
+							+ request.responseText + ': '
+							+ error);
+				},
+				complete: function() {
+					console.log('complete');
 				}
-			})
-			.done(function(json) {
-				console.log('done.json: ' + JSON.stringify(json));
-				$('#out3').val(JSON.stringify(json, null, 2));
-			})
-			.fail(function(xhr, status, errorThrown) {
-				alert('ERROR');
-				console.log('fail.errmsg: ' + errorThrown)
-				console.log('fail.status: ' + status)
-			})
-			.always(function(xhr, status) {
-				console.log('always.status: ' + status)
 			});
+		});
+		$('#btnAction4').on('click', function(event){
+			console.log('btnAction4');
+			console.log('>>> form1: ' + $("form").serialize());
+			console.log('>>> form2: ' + $("form").serializeArray());
+			console.log('>>> form3: ' + JSON.stringify($("form").serializeObject()));
 		});
 	});
 	</script>
 </head>
 <body>
-	<h1>Main</h1>
-	
-	<input id='in1' type='text' name='in1' value='S001' size='12'>
-	<button id='btnAction1'>click!</button><br>
-	<textarea id='out1' cols=50 rows=10></textarea><br><br>
-	<hr width='200' align='left'>
-	<input id='in2' type='text' name='in2' value='L001' size='12'>
-	<button id='btnAction2'>click!</button><br>
-	<textarea id='out2' cols=50 rows=10></textarea><br><br>
-	<hr width='200' align='left'>
-	<input id='in3' type='text' name='in3' value='S001' size='12'>
-	<input id='in4' type='text' name='in4' value='L001' size='12'>
-	<button id='btnAction3'>click!</button><br>
-	<textarea id='out3' cols=50 rows=10></textarea><br><br>
-	
-	
+	<h1>Ajax: test01</h1>
+	<input id='in1' type='text' value='C001'>
+	<button id="btnAction1">action1(cust)</button>
+	<input id='out1' type='text' value='' size=50>
+	<br>
+	<input id='in2' type='text' value='P001'>
+	<button id="btnAction2">action2(prod)</button>
+	<input id='out2' type='text' value='' size=50>
+	<br>
+	<input id='in3' type='text' value='7'>
+	<button id="btnAction3">action3(custprods)</button>
+	<!-- input id='out3' type='text' value='' size=50 -->
+	<br>
+	<textarea id="out3" rows="4" cols="50"></textarea>
+	<br>
+	<button id="btnAction4">action4</button>
+	<br>
+	<form>
+		<input type="text" name="name1" value="val1"><br>
+		<input type="text" name="name2" value="한글"><br>
+		<input type="text" name="name3" value="val3"><br>
+	</form>
 </body>
 </html>

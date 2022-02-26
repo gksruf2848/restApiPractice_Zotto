@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 public class RestApiPractice01Application implements CommandLineRunner {
 
 	public static void main(String[] args) {
-		log.info("HANLIM-20220220 >>>>> {} {}", CurrentInfo.get(), LocalDateTime.now());
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get(), LocalDateTime.now());
 		SpringApplication.run(RestApiPractice01Application.class, args);
 	}
 
@@ -29,7 +29,7 @@ public class RestApiPractice01Application implements CommandLineRunner {
 	
 	@Override
 	public void run(String... args) throws Exception {
-		log.info("HANLIM-20220220 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220227 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Boolean.TRUE) {
 			try {
