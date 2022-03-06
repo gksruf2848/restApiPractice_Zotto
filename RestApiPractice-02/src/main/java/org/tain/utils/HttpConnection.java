@@ -19,6 +19,8 @@ public class HttpConnection {
 	private static final int READ_TIMEOUT = 10;
 	//private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.75 Safari/535.7";
 	private static final String USER_AGENT = "Mozilla/5.0";
+	//user agent란, HTTP 요청을 보내는 디바이스와 브라우저 등 사용자 소프트웨어의 식별 정보를 담고 있는 request header의 한 종류이다.
+	//임의로 수정될 수 없는 값이고, 보통 HTTP 요청 에러가 발생했을 때 요청을 보낸 사용자 환경을 알아보기 위해 사용한다.
 	
 	private static boolean flag = true;
 	
@@ -121,7 +123,7 @@ public class HttpConnection {
 		Map<String, Object> root = null;
 		if (flag) {
 			root = new HashMap<>();
-			root.put("url", "http://localhost:8080/v0.1/rest/custs");
+			root.put("url", "http://localhost:8080/v0.1/rest/lesns");
 			root.put("method", "get");
 			
 			if (flag) {
