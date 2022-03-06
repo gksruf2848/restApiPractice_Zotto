@@ -32,7 +32,7 @@ public class MonHttpClient {
 	///////////////////////////////////////////////////////////////////////////
 	// GET
 	public MonJsonNode get(String httpUrl, Map<String,String> mapReq) throws Exception {
-		log.info("KANG-20210320 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220307 >>>>> {} {}", CurrentInfo.get());
 		
 		HttpMethod httpMethod = HttpMethod.GET;
 		
@@ -93,7 +93,7 @@ public class MonHttpClient {
 	}
 	
 	public String get(String httpUrl, String reqData) throws Exception {
-		log.info("KANG-20210320 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220307 >>>>> {} {}", CurrentInfo.get());
 		Map<String,String> mapReq = new ObjectMapper().readValue(reqData, new TypeReference<Map<String,String>>() {});
 		MonJsonNode node = get(httpUrl, mapReq);
 		return node.toString();
@@ -102,7 +102,7 @@ public class MonHttpClient {
 	///////////////////////////////////////////////////////////////////////////
 	// POST
 	public String post(String httpUrl, String reqData) throws Exception {
-		log.info("KANG-20210320 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220307 >>>>> {} {}", CurrentInfo.get());
 		
 		HttpMethod httpMethod = HttpMethod.POST;
 		
@@ -142,7 +142,7 @@ public class MonHttpClient {
 	}
 	
 	public MonJsonNode post(String httpUrl, MonJsonNode reqData) throws Exception {
-		log.info("KANG-20210320 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220307 >>>>> {} {}", CurrentInfo.get());
 		String resData = post(httpUrl, reqData.toString());
 		return new MonJsonNode(resData);
 	}
@@ -155,7 +155,7 @@ public class MonHttpClient {
 	 * 
 	 */
 	public MonJsonNode execute(MonJsonNode trans) throws Exception {
-		log.info("KANG-20210320 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220307 >>>>> {} {}", CurrentInfo.get());
 		log.info("=========================== MonHttpClient.execute START =============================");
 		
 		if (Boolean.TRUE) {
@@ -184,7 +184,7 @@ public class MonHttpClient {
 	 * 
 	 */
 	private MonJsonNode get(MonJsonNode trans, String method) throws Exception {
-		log.info("KANG-20210320 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220307 >>>>> {} {}", CurrentInfo.get());
 		
 		MultiValueMap<String, String> mapParam = null;
 		if (Boolean.TRUE) {
@@ -271,7 +271,7 @@ public class MonHttpClient {
 	 * 
 	 */
 	private MonJsonNode post(MonJsonNode trans, String method) throws Exception {
-		log.info("KANG-20210320 >>>>> {} {}", CurrentInfo.get());
+		log.info("HANLIM-20220307 >>>>> {} {}", CurrentInfo.get());
 		
 		String httpUrl = null;
 		if (Boolean.TRUE) {
