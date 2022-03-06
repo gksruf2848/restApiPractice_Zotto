@@ -159,12 +159,12 @@ proj-env:
   param:
     name: PARAM (air)
     #home: /Users/kangmac
-    home: /Users/kang-air
+    home: /Users/hanlim-air
     base: /KANG/monster/20210320
     info-path: /json/info
     data-path: /json/data
     
-    base-path: C:\Temp\_LHG\git\restApiPractice_Zotto\RestApiPractice-01\src\main\resources\json
+    base-path: /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-02/src/main/resources/json
     stud-file:        stud.json
     lesn-file:        lesn.json
     stud-lesn-file:   stud_lesn.json
