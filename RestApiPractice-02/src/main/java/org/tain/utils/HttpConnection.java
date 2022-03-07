@@ -7,7 +7,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Base64;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -15,63 +14,64 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class HttpConnection {
 
+	private static boolean flag = true;
+	
 	private static final int CONN_TIMEOUT = 30;
 	private static final int READ_TIMEOUT = 10;
 	//private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.75 Safari/535.7";
 	private static final String USER_AGENT = "Mozilla/5.0";
-	//user agent란, HTTP 요청을 보내는 디바이스와 브라우저 등 사용자 소프트웨어의 식별 정보를 담고 있는 request header의 한 종류이다.
-	//임의로 수정될 수 없는 값이고, 보통 HTTP 요청 에러가 발생했을 때 요청을 보낸 사용자 환경을 알아보기 위해 사용한다.
-	
-	private static boolean flag = true;
 	
 	public static String getResponse(final Map<String,Object> root) {
-		String strUrl = (String)root.get("url");
+		String url = (String)root.get("url");
 		String method = (String)root.getOrDefault("method","get");
 		method = method.toUpperCase();
-		if (flag) System.out.printf("—> strUrl: %s, method: %s\n", strUrl, method);
+		if (flag) System.out.printf("----> url: %s, method: %s\n", url, method);
 		
 		HttpURLConnection con = null;
 		StringBuffer sb = new StringBuffer();
 		
 		try {
-			URL url = new URL(strUrl);
-			con = (HttpURLConnection) url.openConnection();
+			URL obj = new URL(url);
+			con = (HttpURLConnection) obj.openConnection();
 			con.setRequestMethod(method);
 			
-			con.setDefaultUseCaches(true);
-			con.setConnectTimeout(CONN_TIMEOUT * 1000);
-			con.setReadTimeout(READ_TIMEOUT * 1000);
+			if (flag) {
+				con.setDefaultUseCaches(true);
+				con.setConnectTimeout(CONN_TIMEOUT * 1000);
+				con.setReadTimeout(READ_TIMEOUT * 1000);
+				System.out.println("----> getDefaultUseCaches(): " + con.getDefaultUseCaches());
+				System.out.println("----> getConnectTimeout(): " + con.getConnectTimeout());
+				System.out.println("----> getReadTimeout(): " + con.getReadTimeout());
+			}
 			
 			if (true) {
+				con.setRequestProperty("Content-Type", "application/json; utf-8");
+				con.setRequestProperty("Accept", "application/json");
+				
 				@SuppressWarnings("unchecked")
 				Map<String,Object> properties = (Map<String,Object>) root.get("properties");
 				if (properties != null) {
 					for (Map.Entry<String, Object> entry : properties.entrySet()) {
 						con.setRequestProperty(entry.getKey(), (String) entry.getValue());
 					}
-					System.out.println("—> properties: " + properties);
+					System.out.println("----> properties: " + properties);
 				}
 			}
 			
-			if (flag) {
+			if (!flag) {
 				// authorization
 				String auth = "username:password";
 				String encodedBytes = Base64.getEncoder().encodeToString(auth.getBytes());
 				String authorization = "Basic " + encodedBytes;
 				con.setRequestProperty("Authorization", authorization);
-				System.out.println("—> authorization: " + authorization);
+				System.out.println("----> authorization: " + authorization);
 			}
 			
-			String request = "{}";
+			String request = null;
 			if (flag) {
-				@SuppressWarnings("unchecked")
-				Map<String,Object> mapReq = (Map<String,Object>) root.get("request");
-				if (mapReq != null) {
-					ObjectMapper objectMapper = new ObjectMapper();
-					request = objectMapper.writeValueAsString(mapReq);
-					request = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(mapReq);
-					System.out.println("—> request: " + request);
-				}
+				request = (String) root.get("request");
+				if (request == null || "".equals(request))
+					request = "";
 				con.setRequestProperty("Content-Length", String.valueOf(request.length()));
 			}
 			
@@ -83,11 +83,17 @@ public class HttpConnection {
 				dos.writeBytes(request);
 				dos.flush();
 				dos.close();
+				System.out.printf("----> request(%d): %s\n", request.length(), request);
+			}
+			
+			if (flag) {
+				System.out.println("----> header: " + con.getHeaderFields());
+				//System.out.println("---> properties: " + con.getRequestProperties());
 			}
 			
 			if (flag) {
 				int resCode = con.getResponseCode();
-				System.out.println("—> resCode: " + resCode);
+				System.out.println("----> resCode: " + resCode);
 			}
 			
 			if (flag) {
@@ -96,24 +102,21 @@ public class HttpConnection {
 				BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(),"utf-8"));
 				String line = null;
 				while ((line = br.readLine()) != null) {
+					//sb.append(line);
 					sb.append(line).append('\n');
 				}
 				br.close();
-			}
-			
-			if (flag) {
-				System.out.println("—> header: " + con.getHeaderFields());
-				//System.out.println("—> properties: " + con.getRequestProperties());
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			if (con != null) {
 				con.disconnect();
-				if (flag) System.out.println("—> disconnect()");
+				if (flag) System.out.println("----> disconnect()");
 			}
 		}
 		
+		System.out.println("----> response: " + sb.toString());
 		return sb.toString();
 	}
 	
@@ -123,14 +126,14 @@ public class HttpConnection {
 		Map<String, Object> root = null;
 		if (flag) {
 			root = new HashMap<>();
-			root.put("url", "http://localhost:8080/v0.1/rest/lesns");
-			root.put("method", "get");
+			root.put("url", "http://localhost:8080/v0.1/rest/custs");
+			if (!flag) root.put("method", "get");
 			
-			if (flag) {
+			if (!flag) {
 				Map<String, Object> header = new HashMap<>();
 				root.put("header", header);
 			}
-			if (flag) {
+			if (!flag) {
 				Map<String, Object> properties = new HashMap<>();
 				properties.put("User-Agent", USER_AGENT);
 				properties.put("Connection", "keep-alive"); 
@@ -146,10 +149,11 @@ public class HttpConnection {
 				root.put("properties", properties);
 			}
 			if (flag) {
-				Map<String, Object> request = new LinkedHashMap<>();
-				request.put("code", "C001");
-				request.put("dummy", "dummyValue");
+				String request = null;
+				request = "";
+				//request = "{\"code\":\"C001\",\"dummy\":\"dummyValue\"}";
 				root.put("request", request);
+				System.out.println("--> request: " + request);
 			}
 		}
 		
@@ -157,8 +161,8 @@ public class HttpConnection {
 		if (flag) {
 			ObjectMapper objectMapper = new ObjectMapper();
 			JsonNode objJson = objectMapper.readTree(strRes);
-			System.out.println("—> strRes1: " + objectMapper.writeValueAsString(objJson));
-			System.out.println("—> strRes2: " + objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(objJson));
+			System.out.println("—> response1: " + objectMapper.writeValueAsString(objJson));
+			System.out.println("—> response2: " + objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(objJson));
 		}
 	}
 }

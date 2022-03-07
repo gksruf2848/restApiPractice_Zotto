@@ -1,4 +1,4 @@
-package org.tain.test;
+package org.tain._test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
