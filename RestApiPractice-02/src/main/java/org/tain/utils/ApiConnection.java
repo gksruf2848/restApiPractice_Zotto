@@ -8,7 +8,7 @@ public class ApiConnection {
 	private static boolean flag = true;
 	
 	public static void main(String[] args) throws Exception {
-		if (flag) {
+		if (!flag) {
 			Map<String, Object> root = new HashMap<>();
 			root.put("url", "http://localhost:8080/v0.1/rest/custs");
 			root.put("method", "get");
@@ -44,7 +44,7 @@ public class ApiConnection {
 			System.out.println("—> response: " + response);
 		}
 		
-		if (!flag) {
+		if (flag) {
 			Map<String, Object> root = new HashMap<>();
 			root.put("url", "http://bobr2.tistory.com/");
 			root.put("methor", "post");
