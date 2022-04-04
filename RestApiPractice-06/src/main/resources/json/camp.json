@@ -1,0 +1,24 @@
+{ "campList" : [
+	{
+		"campCode": "C001",
+		"campContent": "AAA"
+	},{
+		"campCode": "C002",
+		"campContent": "AAB"
+	},{
+		"campCode": "C003",
+		"campContent": "AAC"
+	},{
+		"campCode": "C004",
+		"campContent": "AAD"
+	},{
+		"campCode": "C005",
+		"campContent": "AAE"
+	},{
+		"campCode": "C006",
+		"campContent": "AAF"
+	},{
+		"campCode": "C007",
+		"campContent": "07"
+	}
+]}
