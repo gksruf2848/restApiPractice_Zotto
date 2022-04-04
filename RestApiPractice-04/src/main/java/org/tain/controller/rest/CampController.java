@@ -21,7 +21,7 @@ import org.tain.utils.IpPrint;
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping(value = {"/camp"})
+@RequestMapping(value = {"/rest"})
 @Slf4j
 public class CampController {
 
