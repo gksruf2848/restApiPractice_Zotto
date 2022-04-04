@@ -14,8 +14,23 @@
 			tbl_camp
 		where 1=1
 		<if test='code != null'>
-			and code = #{code}
+			and camp_code = #{campCode}
 		</if>
 	</select>
+	
+	<insert id="insertOne" parameterType="CamelMap">
+		insert into tbl_camp 
+			(
+				id,
+				camp_code,
+				camp_content
+			)
+		values 
+			(
+				#{id}, 
+				#{campCode}, 
+				#{campContent}
+			)
+	</insert>
 
 </mapper>
