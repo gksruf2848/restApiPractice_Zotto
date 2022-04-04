@@ -4487,3 +4487,5 @@ as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=10
 17. insert into tbl_camp ( id, camp_code, camp_content ) values ( 20, 'asdf', 'asdf' ) 
  {executed in 1 msec}
 2022-04-04 18:13:02,430 INFO  [http-nio-8080-exec-4] [o.t.c.rest.CampController     ] - >>>>> ret: 1
+2022-04-04 23:53:28,030 INFO  [RMI TCP Connection(40)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-04-04 23:53:28,151 INFO  [RMI TCP Connection(40)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'

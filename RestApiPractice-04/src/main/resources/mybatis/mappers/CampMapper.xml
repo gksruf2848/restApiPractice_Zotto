@@ -8,13 +8,13 @@
 	<select id="selectAll" parameterType="CamelMap" resultType="CamelMap">
 		select
 			id
-			, campCode
-			, campContent
+			, camp_code
+			, camp_content
 		from
 			tbl_camp
 		where 1=1
 		<if test='code != null'>
-			and code = #{code}
+			and camp_code = #{campCode}
 		</if>
 	</select>
 
