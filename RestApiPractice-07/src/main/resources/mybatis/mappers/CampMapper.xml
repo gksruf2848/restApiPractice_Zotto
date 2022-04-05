@@ -32,7 +32,6 @@
 				, #{campCode}
 				, #{campContent}
 			)
-	
 	</insert>
 
 </mapper>

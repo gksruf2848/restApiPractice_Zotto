@@ -1,0 +1,1119 @@
+2022-04-05 15:43:07,314 INFO  [main      ] [o.t.RestApiPractice07Application] - Starting RestApiPractice07Application using Java 1.8.0_321 on hanlim-airui-MacBookAir.local with PID 2451 (/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/bin/main started by hanlim_air in /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07)
+2022-04-05 15:43:07,315 INFO  [main      ] [o.t.RestApiPractice07Application] - The following profiles are active: proj-default,proj-air
+2022-04-05 15:43:08,120 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 15:43:08,194 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 67 ms. Found 1 JPA repository interfaces.
+2022-04-05 15:43:08,882 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat initialized with port(s): 8080 (http)
+2022-04-05 15:43:08,889 INFO  [main      ] [o.a.c.core.StandardService    ] - Starting service [Tomcat]
+2022-04-05 15:43:08,889 INFO  [main      ] [o.a.c.core.StandardEngine     ] - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-04-05 15:43:08,948 INFO  [main      ] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring embedded WebApplicationContext
+2022-04-05 15:43:08,948 INFO  [main      ] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1556 ms
+2022-04-05 15:43:09,265 INFO  [main      ] [o.s.b.a.h.H2ConsoleAutoConfiguration] - H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9092/monsterdb'
+2022-04-05 15:43:09,564 INFO  [main      ] [o.h.j.internal.util.LogHelper ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 15:43:09,597 INFO  [main      ] [org.hibernate.Version         ] - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-04-05 15:43:09,694 INFO  [main      ] [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-05 15:43:09,759 INFO  [main      ] [org.hibernate.dialect.Dialect ] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-05 15:43:10,208 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:42)
+3. select * from INFORMATION_SCHEMA.SEQUENCES 
+ {executed in 7 msec}
+2022-04-05 15:43:10,218 INFO  [main      ] [jdbc.resultsettable           ] - 
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+|sequence_catalog |sequence_schema |sequence_name |current_value |increment |is_generated |remarks |cache |min_value |max_value           |is_cycle |id |
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+|MONSTERDB        |PUBLIC          |CDITM_SEQ     |355           |1         |false        |        |32    |1         |9223372036854775807 |false    |54 |
+|MONSTERDB        |PUBLIC          |ROLE_SEQ      |178           |1         |false        |        |32    |1         |9223372036854775807 |false    |61 |
+|MONSTERDB        |PUBLIC          |ORG_SEQ       |169           |1         |false        |        |32    |1         |9223372036854775807 |false    |59 |
+|MONSTERDB        |PUBLIC          |CDMST_SEQ     |187           |1         |false        |        |32    |1         |9223372036854775807 |false    |55 |
+|MONSTERDB        |PUBLIC          |CMD_SEQ       |305           |1         |false        |        |32    |1         |9223372036854775807 |false    |56 |
+|MONSTERDB        |PUBLIC          |ROLEUSR_SEQ   |187           |1         |false        |        |32    |1         |9223372036854775807 |false    |62 |
+|MONSTERDB        |PUBLIC          |GRPSVR_SEQ    |387           |1         |false        |        |32    |1         |9223372036854775807 |false    |58 |
+|MONSTERDB        |PUBLIC          |USR_SEQ       |347           |1         |false        |        |32    |1         |9223372036854775807 |false    |64 |
+|MONSTERDB        |PUBLIC          |BRW_SEQ       |196           |1         |false        |        |32    |1         |9223372036854775807 |false    |53 |
+|MONSTERDB        |PUBLIC          |RESULT_SEQ    |128           |1         |false        |        |32    |1         |9223372036854775807 |false    |60 |
+|MONSTERDB        |PUBLIC          |SVR_SEQ       |237           |1         |false        |        |32    |1         |9223372036854775807 |false    |63 |
+|MONSTERDB        |PUBLIC          |GRP_SEQ       |196           |1         |false        |        |32    |1         |9223372036854775807 |false    |57 |
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+
+2022-04-05 15:43:10,413 INFO  [main      ] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 15:43:10,419 INFO  [main      ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 15:43:10,852 INFO  [main      ] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> START org.tain.files.FileSystemStorageService.start()#31
+2022-04-05 15:43:10,853 INFO  [main      ] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> END   org.tain.files.FileSystemStorageService.start()#34, rootLocation: FILES
+2022-04-05 15:43:10,855 INFO  [main      ] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> START org.tain.tools.Tools.startTools()#15 {}
+2022-04-05 15:43:10,856 INFO  [main      ] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> END   org.tain.tools.Tools.startTools()#20 {}
+2022-04-05 15:43:11,604 WARN  [main      ] [o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] - Cannot find template location: classpath:templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-05 15:43:11,892 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat started on port(s): 8080 (http) with context path '/v0.1'
+2022-04-05 15:43:11,902 INFO  [main      ] [o.t.RestApiPractice07Application] - Started RestApiPractice07Application in 5.156 seconds (JVM running for 6.574)
+2022-04-05 15:43:11,903 INFO  [main      ] [o.t.RestApiPractice07Application] - HANLIM-20220404 >>>>> org.tain.RestApiPractice07Application.run()#32 {}
+2022-04-05 15:43:11,904 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.doing()#16 {}
+2022-04-05 15:43:11,904 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobProperties()#30 {}
+2022-04-05 15:43:11,904 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - HANLIM-20220404 >>>>> org.tain.working.properties.PropertiesWorking.doing()#35 {}
+2022-04-05 15:43:11,930 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - BASE -- {
+  "name" : "Zotto API project",
+  "program" : "KieaZotto API program",
+  "version" : "ver 1.1_2021.04.01",
+  "comment" : "This is Zotto API project.",
+  "charSet" : "utf-8",
+  "testFlag" : false,
+  "svrCode" : "TEST03",
+  "dummy" : null
+}
+2022-04-05 15:43:11,931 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - PARAM - {
+  "name" : "PARAM (air)",
+  "home" : "/Users/hanlim-air",
+  "base" : "/KANG/monster/20210320",
+  "infoPath" : "/json/info",
+  "dataPath" : "/json/data",
+  "basePath" : "/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/src/main/resources/json",
+  "campFile" : "camp.json",
+  "dummy" : null
+}
+2022-04-05 15:43:11,932 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - JOB  -- {
+  "name" : "JOB (air)",
+  "dummy" : null
+}
+2022-04-05 15:43:11,932 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - JSON -- {
+  "name" : "JSON (air)",
+  "dummy" : null
+}
+2022-04-05 15:43:11,932 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - URL  -- {
+  "name" : "URL (air)",
+  "dummy" : null
+}
+2022-04-05 15:43:11,932 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobLoad()#41 {}
+2022-04-05 15:43:11,932 INFO  [main      ] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.doing()#15 {}
+2022-04-05 15:43:11,933 INFO  [main      ] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.loadTblCamp()#28 {}
+2022-04-05 15:43:11,933 INFO  [main      ] [o.t.w.l.tables.TblCampLoader  ] - HANLIM-20220404 >>>>> org.tain.working.load.tables.TblCampLoader.loading()#31 {}
+2022-04-05 15:43:12,088 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+4. select tblcamp0_.id as id1_0_, tblcamp0_.camp_code as camp_cod2_0_, tblcamp0_.camp_content 
+as camp_con3_0_ from tbl_camp tblcamp0_ 
+ {executed in 13 msec}
+2022-04-05 15:43:12,096 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|1  |C001      |AAA          |
+|2  |C002      |BBB          |
+|3  |C003      |AAB          |
+|4  |C004      |AAB          |
+|5  |C005      |AAB          |
+|10 |asdf      |asdf         |
+|20 |asdf      |asdf         |
+|---|----------|-------------|
+
+2022-04-05 15:43:12,152 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=1 
+ {executed in 17 msec}
+2022-04-05 15:43:12,156 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=2 
+ {executed in 2 msec}
+2022-04-05 15:43:12,157 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=3 
+ {executed in 1 msec}
+2022-04-05 15:43:12,158 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=4 
+ {executed in 0 msec}
+2022-04-05 15:43:12,159 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=5 
+ {executed in 0 msec}
+2022-04-05 15:43:12,160 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=10 
+ {executed in 0 msec}
+2022-04-05 15:43:12,161 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=20 
+ {executed in 1 msec}
+2022-04-05 15:43:12,198 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+5. select tblcamp0_.id as id1_0_0_, tblcamp0_.camp_code as camp_cod2_0_0_, tblcamp0_.camp_content 
+as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=1 
+ {executed in 1 msec}
+2022-04-05 15:43:12,199 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 15:43:12,206 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+5. insert into tbl_camp (camp_code, camp_content, id) values ('C001', 'AAA', 1) 
+ {executed in 3 msec}
+2022-04-05 15:43:12,212 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+6. select tblcamp0_.id as id1_0_0_, tblcamp0_.camp_code as camp_cod2_0_0_, tblcamp0_.camp_content 
+as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=2 
+ {executed in 2 msec}
+2022-04-05 15:43:12,213 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 15:43:12,215 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+6. insert into tbl_camp (camp_code, camp_content, id) values ('C002', 'AAB', 2) 
+ {executed in 2 msec}
+2022-04-05 15:43:34,554 INFO  [http-nio-8080-exec-1] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-05 15:43:34,555 INFO  [http-nio-8080-exec-1] [o.s.w.s.DispatcherServlet     ] - Initializing Servlet 'dispatcherServlet'
+2022-04-05 15:43:34,559 INFO  [http-nio-8080-exec-1] [o.s.w.s.DispatcherServlet     ] - Completed initialization in 4 ms
+2022-04-05 15:43:34,608 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> ip.info: 0:0:0:0:0:0:0:1
+2022-04-05 15:43:34,609 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> request.headers: [user-agent:"PostmanRuntime/7.29.0", accept:"*/*", postman-token:"7402851b-6ff0-4e8b-8f92-020af1eeaee5", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"64", Content-Type:"application/json;charset=UTF-8"]
+2022-04-05 15:43:34,609 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> request.body: {
+    "id":10,
+    "campCode":"asdf",
+    "campContent":"asdf"
+}
+2022-04-05 15:43:34,653 DEBUG [http-nio-8080-exec-1] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+7. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 10 , 'asdf' , 'asdf' ) 
+ {executed in 13 msec}
+2022-04-05 15:43:34,655 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> ret: 1
+2022-04-05 15:43:47,146 INFO  [http-nio-8080-exec-3] [o.t.c.rest.CampController     ] - >>>>> ip.info: 0:0:0:0:0:0:0:1
+2022-04-05 15:43:47,148 INFO  [http-nio-8080-exec-3] [o.t.c.rest.CampController     ] - >>>>> request.headers: [user-agent:"PostmanRuntime/7.29.0", accept:"*/*", postman-token:"4de16930-acdf-43d6-8327-24e544e7d844", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"64", Content-Type:"application/json;charset=UTF-8"]
+2022-04-05 15:43:47,148 INFO  [http-nio-8080-exec-3] [o.t.c.rest.CampController     ] - >>>>> request.body: {
+    "id":10,
+    "campCode":"asdf",
+    "campContent":"asdf"
+}
+2022-04-05 15:43:47,179 ERROR [http-nio-8080-exec-3] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+8. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 10 , 'asdf' , 'asdf' ) 
+ {FAILED after 8 msec}
+org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TBL_CAMP(ID) [10, 'asdf', 'asdf']"; SQL statement:
+INSERT INTO tbl_camp
+			(
+				id
+				, camp_code
+				, camp_content
+			)
+		VALUES
+			(
+				?
+				, ?
+				, ?
+			) [23505-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:611)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:240)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy97.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy98.insertOne(Unknown Source)
+	at org.tain.controller.rest.CampController.save(CampController.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2022-04-05 15:43:47,270 ERROR [http-nio-8080-exec-3] [o.a.c.c.C.[.[.[.1.[dispatcherServlet]] - Servlet.service() for servlet [dispatcherServlet] in context with path [/v0.1] threw exception [Request processing failed; nested exception is org.springframework.dao.DuplicateKeyException: 
+### Error updating database.  Cause: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TBL_CAMP(ID) [10, 'asdf', 'asdf']"; SQL statement:
+INSERT INTO tbl_camp
+			(
+				id
+				, camp_code
+				, camp_content
+			)
+		VALUES
+			(
+				?
+				, ?
+				, ?
+			) [23505-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.mvstore.db.MVPrimaryIndex.add(MVPrimaryIndex.java:127)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:531)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:195)
+	at org.h2.command.dml.Insert.update(Insert.java:151)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:406)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:183)
+	at java.lang.Thread.run(Thread.java:750)
+
+### The error may exist in file [/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/bin/main/mybatis/mappers/CampMapper.xml]
+### The error may involve org.tain.mybatis.mappers.CampMapper.insertOne-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO tbl_camp    (     id     , camp_code     , camp_content    )   VALUES    (     ?     , ?     , ?    )
+### Cause: org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TBL_CAMP(ID) [10, 'asdf', 'asdf']"; SQL statement:
+INSERT INTO tbl_camp
+			(
+				id
+				, camp_code
+				, camp_content
+			)
+		VALUES
+			(
+				?
+				, ?
+				, ?
+			) [23505-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.mvstore.db.MVPrimaryIndex.add(MVPrimaryIndex.java:127)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:531)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:195)
+	at org.h2.command.dml.Insert.update(Insert.java:151)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:406)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:183)
+	at java.lang.Thread.run(Thread.java:750)
+
+; Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TBL_CAMP(ID) [10, 'asdf', 'asdf']"; SQL statement:
+INSERT INTO tbl_camp
+			(
+				id
+				, camp_code
+				, camp_content
+			)
+		VALUES
+			(
+				?
+				, ?
+				, ?
+			) [23505-200]; nested exception is org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TBL_CAMP(ID) [10, 'asdf', 'asdf']"; SQL statement:
+INSERT INTO tbl_camp
+			(
+				id
+				, camp_code
+				, camp_content
+			)
+		VALUES
+			(
+				?
+				, ?
+				, ?
+			) [23505-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.mvstore.db.MVPrimaryIndex.add(MVPrimaryIndex.java:127)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:531)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:195)
+	at org.h2.command.dml.Insert.update(Insert.java:151)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:198)
+	at org.h2.command.Command.executeUpdate(Command.java:251)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:406)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:183)
+	at java.lang.Thread.run(Thread.java:750)
+] with root cause
+org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.TBL_CAMP(ID) [10, 'asdf', 'asdf']"; SQL statement:
+INSERT INTO tbl_camp
+			(
+				id
+				, camp_code
+				, camp_content
+			)
+		VALUES
+			(
+				?
+				, ?
+				, ?
+			) [23505-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:459)
+	at org.h2.engine.SessionRemote.done(SessionRemote.java:611)
+	at org.h2.command.CommandRemote.executeUpdate(CommandRemote.java:237)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:240)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.execute(ProxyPreparedStatement.java:44)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.execute(HikariProxyPreparedStatement.java)
+	at net.sf.log4jdbc.sql.jdbcapi.PreparedStatementSpy.execute(PreparedStatementSpy.java:443)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:427)
+	at com.sun.proxy.$Proxy97.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:272)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy98.insertOne(Unknown Source)
+	at org.tain.controller.rest.CampController.save(CampController.java:74)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1063)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:228)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:190)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:163)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:357)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:382)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:893)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1723)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2022-04-05 15:43:56,046 INFO  [http-nio-8080-exec-5] [o.t.c.rest.CampController     ] - >>>>> ip.info: 0:0:0:0:0:0:0:1
+2022-04-05 15:43:56,049 INFO  [http-nio-8080-exec-5] [o.t.c.rest.CampController     ] - >>>>> request.headers: [user-agent:"PostmanRuntime/7.29.0", accept:"*/*", postman-token:"ceed534c-36d3-465a-8c09-ca5cd790ebe2", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"64", Content-Type:"application/json;charset=UTF-8"]
+2022-04-05 15:43:56,050 INFO  [http-nio-8080-exec-5] [o.t.c.rest.CampController     ] - >>>>> request.body: {
+    "id":12,
+    "campCode":"asdf",
+    "campContent":"asdf"
+}
+2022-04-05 15:43:56,074 DEBUG [http-nio-8080-exec-5] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+10. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 12 , 'asdf' , 'asdf' ) 
+ {executed in 4 msec}
+2022-04-05 15:43:56,076 INFO  [http-nio-8080-exec-5] [o.t.c.rest.CampController     ] - >>>>> ret: 1
+2022-04-05 15:48:26,899 INFO  [RMI TCP Connection(8)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-04-05 15:48:26,952 INFO  [RMI TCP Connection(8)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 15:58:26,880 INFO  [main      ] [o.t.RestApiPractice07Application] - Starting RestApiPractice07Application using Java 1.8.0_321 on hanlim-airui-MacBookAir.local with PID 2680 (/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/bin/main started by hanlim_air in /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07)
+2022-04-05 15:58:26,881 INFO  [main      ] [o.t.RestApiPractice07Application] - The following profiles are active: proj-default,proj-air
+2022-04-05 15:58:27,610 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 15:58:27,675 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 60 ms. Found 1 JPA repository interfaces.
+2022-04-05 15:58:28,317 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat initialized with port(s): 8080 (http)
+2022-04-05 15:58:28,325 INFO  [main      ] [o.a.c.core.StandardService    ] - Starting service [Tomcat]
+2022-04-05 15:58:28,325 INFO  [main      ] [o.a.c.core.StandardEngine     ] - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-04-05 15:58:28,383 INFO  [main      ] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring embedded WebApplicationContext
+2022-04-05 15:58:28,383 INFO  [main      ] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1462 ms
+2022-04-05 15:58:28,552 INFO  [main      ] [o.s.b.a.h.H2ConsoleAutoConfiguration] - H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9092/monsterdb'
+2022-04-05 15:58:28,849 INFO  [main      ] [o.h.j.internal.util.LogHelper ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 15:58:28,873 INFO  [main      ] [org.hibernate.Version         ] - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-04-05 15:58:28,956 INFO  [main      ] [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-05 15:58:29,011 INFO  [main      ] [org.hibernate.dialect.Dialect ] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-05 15:58:29,379 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:42)
+3. select * from INFORMATION_SCHEMA.SEQUENCES 
+ {executed in 2 msec}
+2022-04-05 15:58:29,386 INFO  [main      ] [jdbc.resultsettable           ] - 
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+|sequence_catalog |sequence_schema |sequence_name |current_value |increment |is_generated |remarks |cache |min_value |max_value           |is_cycle |id |
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+|MONSTERDB        |PUBLIC          |CDITM_SEQ     |355           |1         |false        |        |32    |1         |9223372036854775807 |false    |54 |
+|MONSTERDB        |PUBLIC          |ROLE_SEQ      |178           |1         |false        |        |32    |1         |9223372036854775807 |false    |61 |
+|MONSTERDB        |PUBLIC          |ORG_SEQ       |169           |1         |false        |        |32    |1         |9223372036854775807 |false    |59 |
+|MONSTERDB        |PUBLIC          |CDMST_SEQ     |187           |1         |false        |        |32    |1         |9223372036854775807 |false    |55 |
+|MONSTERDB        |PUBLIC          |CMD_SEQ       |305           |1         |false        |        |32    |1         |9223372036854775807 |false    |56 |
+|MONSTERDB        |PUBLIC          |ROLEUSR_SEQ   |187           |1         |false        |        |32    |1         |9223372036854775807 |false    |62 |
+|MONSTERDB        |PUBLIC          |GRPSVR_SEQ    |387           |1         |false        |        |32    |1         |9223372036854775807 |false    |58 |
+|MONSTERDB        |PUBLIC          |USR_SEQ       |347           |1         |false        |        |32    |1         |9223372036854775807 |false    |64 |
+|MONSTERDB        |PUBLIC          |BRW_SEQ       |196           |1         |false        |        |32    |1         |9223372036854775807 |false    |53 |
+|MONSTERDB        |PUBLIC          |RESULT_SEQ    |128           |1         |false        |        |32    |1         |9223372036854775807 |false    |60 |
+|MONSTERDB        |PUBLIC          |SVR_SEQ       |237           |1         |false        |        |32    |1         |9223372036854775807 |false    |63 |
+|MONSTERDB        |PUBLIC          |GRP_SEQ       |196           |1         |false        |        |32    |1         |9223372036854775807 |false    |57 |
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+
+2022-04-05 15:58:29,475 INFO  [main      ] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 15:58:29,482 INFO  [main      ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 15:58:29,893 INFO  [main      ] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> START org.tain.files.FileSystemStorageService.start()#31
+2022-04-05 15:58:29,896 INFO  [main      ] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> END   org.tain.files.FileSystemStorageService.start()#34, rootLocation: FILES
+2022-04-05 15:58:29,898 INFO  [main      ] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> START org.tain.tools.Tools.startTools()#15 {}
+2022-04-05 15:58:29,899 INFO  [main      ] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> END   org.tain.tools.Tools.startTools()#20 {}
+2022-04-05 15:58:30,611 WARN  [main      ] [o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] - Cannot find template location: classpath:templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-05 15:58:30,905 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat started on port(s): 8080 (http) with context path '/v0.1'
+2022-04-05 15:58:30,927 INFO  [main      ] [o.t.RestApiPractice07Application] - Started RestApiPractice07Application in 4.573 seconds (JVM running for 5.267)
+2022-04-05 15:58:30,931 INFO  [main      ] [o.t.RestApiPractice07Application] - HANLIM-20220404 >>>>> org.tain.RestApiPractice07Application.run()#32 {}
+2022-04-05 15:58:30,932 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.doing()#16 {}
+2022-04-05 15:58:30,932 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobProperties()#30 {}
+2022-04-05 15:58:30,932 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - HANLIM-20220404 >>>>> org.tain.working.properties.PropertiesWorking.doing()#35 {}
+2022-04-05 15:58:30,961 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - BASE -- {
+  "name" : "Zotto API project",
+  "program" : "KieaZotto API program",
+  "version" : "ver 1.1_2021.04.01",
+  "comment" : "This is Zotto API project.",
+  "charSet" : "utf-8",
+  "testFlag" : false,
+  "svrCode" : "TEST03",
+  "dummy" : null
+}
+2022-04-05 15:58:30,963 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - PARAM - {
+  "name" : "PARAM (air)",
+  "home" : "/Users/hanlim-air",
+  "base" : "/KANG/monster/20210320",
+  "infoPath" : "/json/info",
+  "dataPath" : "/json/data",
+  "basePath" : "/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/src/main/resources/json",
+  "campFile" : "camp.json",
+  "dummy" : null
+}
+2022-04-05 15:58:30,964 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - JOB  -- {
+  "name" : "JOB (air)",
+  "dummy" : null
+}
+2022-04-05 15:58:30,964 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - JSON -- {
+  "name" : "JSON (air)",
+  "dummy" : null
+}
+2022-04-05 15:58:30,965 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - URL  -- {
+  "name" : "URL (air)",
+  "dummy" : null
+}
+2022-04-05 15:58:30,965 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobLoad()#41 {}
+2022-04-05 15:58:30,965 INFO  [main      ] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.doing()#15 {}
+2022-04-05 15:58:30,965 INFO  [main      ] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.loadTblCamp()#28 {}
+2022-04-05 15:58:30,965 INFO  [main      ] [o.t.w.l.tables.TblCampLoader  ] - HANLIM-20220404 >>>>> org.tain.working.load.tables.TblCampLoader.loading()#31 {}
+2022-04-05 15:58:31,115 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+4. select tblcamp0_.id as id1_0_, tblcamp0_.camp_code as camp_cod2_0_, tblcamp0_.camp_content 
+as camp_con3_0_ from tbl_camp tblcamp0_ 
+ {executed in 2 msec}
+2022-04-05 15:58:31,122 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|1  |C001      |AAA          |
+|2  |C002      |AAB          |
+|10 |asdf      |asdf         |
+|12 |asdf      |asdf         |
+|---|----------|-------------|
+
+2022-04-05 15:58:31,178 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=1 
+ {executed in 8 msec}
+2022-04-05 15:58:31,182 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=2 
+ {executed in 1 msec}
+2022-04-05 15:58:31,185 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=10 
+ {executed in 1 msec}
+2022-04-05 15:58:31,186 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=12 
+ {executed in 0 msec}
+2022-04-05 15:58:31,240 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+5. select tblcamp0_.id as id1_0_0_, tblcamp0_.camp_code as camp_cod2_0_0_, tblcamp0_.camp_content 
+as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=1 
+ {executed in 3 msec}
+2022-04-05 15:58:31,242 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 15:58:31,250 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+5. insert into tbl_camp (camp_code, camp_content, id) values ('C001', 'AAA', 1) 
+ {executed in 1 msec}
+2022-04-05 15:58:31,258 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+6. select tblcamp0_.id as id1_0_0_, tblcamp0_.camp_code as camp_cod2_0_0_, tblcamp0_.camp_content 
+as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=2 
+ {executed in 6 msec}
+2022-04-05 15:58:31,259 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 15:58:31,261 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+6. insert into tbl_camp (camp_code, camp_content, id) values ('C002', 'AAB', 2) 
+ {executed in 1 msec}
+2022-04-05 15:58:49,075 INFO  [http-nio-8080-exec-2] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-05 15:58:49,076 INFO  [http-nio-8080-exec-2] [o.s.w.s.DispatcherServlet     ] - Initializing Servlet 'dispatcherServlet'
+2022-04-05 15:58:49,082 INFO  [http-nio-8080-exec-2] [o.s.w.s.DispatcherServlet     ] - Completed initialization in 6 ms
+2022-04-05 16:00:14,328 INFO  [RMI TCP Connection(4)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-04-05 16:00:14,387 INFO  [RMI TCP Connection(4)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 16:00:16,022 INFO  [main      ] [o.t.RestApiPractice07Application] - Starting RestApiPractice07Application using Java 1.8.0_321 on hanlim-airui-MacBookAir.local with PID 2712 (/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/bin/main started by hanlim_air in /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07)
+2022-04-05 16:00:16,023 INFO  [main      ] [o.t.RestApiPractice07Application] - The following profiles are active: proj-default,proj-air
+2022-04-05 16:00:16,731 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 16:00:16,793 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
+2022-04-05 16:00:17,432 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat initialized with port(s): 8080 (http)
+2022-04-05 16:00:17,439 INFO  [main      ] [o.a.c.core.StandardService    ] - Starting service [Tomcat]
+2022-04-05 16:00:17,440 INFO  [main      ] [o.a.c.core.StandardEngine     ] - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-04-05 16:00:17,497 INFO  [main      ] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring embedded WebApplicationContext
+2022-04-05 16:00:17,498 INFO  [main      ] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1435 ms
+2022-04-05 16:00:17,629 INFO  [main      ] [o.s.b.a.h.H2ConsoleAutoConfiguration] - H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9092/monsterdb'
+2022-04-05 16:00:17,919 INFO  [main      ] [o.h.j.internal.util.LogHelper ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 16:00:17,944 INFO  [main      ] [org.hibernate.Version         ] - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-04-05 16:00:18,028 INFO  [main      ] [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-05 16:00:18,087 INFO  [main      ] [org.hibernate.dialect.Dialect ] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-05 16:00:18,478 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:42)
+3. select * from INFORMATION_SCHEMA.SEQUENCES 
+ {executed in 5 msec}
+2022-04-05 16:00:18,486 INFO  [main      ] [jdbc.resultsettable           ] - 
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+|sequence_catalog |sequence_schema |sequence_name |current_value |increment |is_generated |remarks |cache |min_value |max_value           |is_cycle |id |
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+|MONSTERDB        |PUBLIC          |CDITM_SEQ     |355           |1         |false        |        |32    |1         |9223372036854775807 |false    |54 |
+|MONSTERDB        |PUBLIC          |ROLE_SEQ      |178           |1         |false        |        |32    |1         |9223372036854775807 |false    |61 |
+|MONSTERDB        |PUBLIC          |ORG_SEQ       |169           |1         |false        |        |32    |1         |9223372036854775807 |false    |59 |
+|MONSTERDB        |PUBLIC          |CDMST_SEQ     |187           |1         |false        |        |32    |1         |9223372036854775807 |false    |55 |
+|MONSTERDB        |PUBLIC          |CMD_SEQ       |305           |1         |false        |        |32    |1         |9223372036854775807 |false    |56 |
+|MONSTERDB        |PUBLIC          |ROLEUSR_SEQ   |187           |1         |false        |        |32    |1         |9223372036854775807 |false    |62 |
+|MONSTERDB        |PUBLIC          |GRPSVR_SEQ    |387           |1         |false        |        |32    |1         |9223372036854775807 |false    |58 |
+|MONSTERDB        |PUBLIC          |USR_SEQ       |347           |1         |false        |        |32    |1         |9223372036854775807 |false    |64 |
+|MONSTERDB        |PUBLIC          |BRW_SEQ       |196           |1         |false        |        |32    |1         |9223372036854775807 |false    |53 |
+|MONSTERDB        |PUBLIC          |RESULT_SEQ    |128           |1         |false        |        |32    |1         |9223372036854775807 |false    |60 |
+|MONSTERDB        |PUBLIC          |SVR_SEQ       |237           |1         |false        |        |32    |1         |9223372036854775807 |false    |63 |
+|MONSTERDB        |PUBLIC          |GRP_SEQ       |196           |1         |false        |        |32    |1         |9223372036854775807 |false    |57 |
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+
+2022-04-05 16:00:18,581 INFO  [main      ] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 16:00:18,591 INFO  [main      ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 16:00:19,009 INFO  [main      ] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> START org.tain.files.FileSystemStorageService.start()#31
+2022-04-05 16:00:19,012 INFO  [main      ] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> END   org.tain.files.FileSystemStorageService.start()#34, rootLocation: FILES
+2022-04-05 16:00:19,014 INFO  [main      ] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> START org.tain.tools.Tools.startTools()#15 {}
+2022-04-05 16:00:19,015 INFO  [main      ] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> END   org.tain.tools.Tools.startTools()#20 {}
+2022-04-05 16:00:19,698 WARN  [main      ] [o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] - Cannot find template location: classpath:templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-05 16:00:19,991 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat started on port(s): 8080 (http) with context path '/v0.1'
+2022-04-05 16:00:20,014 INFO  [main      ] [o.t.RestApiPractice07Application] - Started RestApiPractice07Application in 4.512 seconds (JVM running for 4.996)
+2022-04-05 16:00:20,018 INFO  [main      ] [o.t.RestApiPractice07Application] - HANLIM-20220404 >>>>> org.tain.RestApiPractice07Application.run()#32 {}
+2022-04-05 16:00:20,019 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.doing()#16 {}
+2022-04-05 16:00:20,019 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobProperties()#30 {}
+2022-04-05 16:00:20,019 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - HANLIM-20220404 >>>>> org.tain.working.properties.PropertiesWorking.doing()#35 {}
+2022-04-05 16:00:20,051 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - BASE -- {
+  "name" : "Zotto API project",
+  "program" : "KieaZotto API program",
+  "version" : "ver 1.1_2021.04.01",
+  "comment" : "This is Zotto API project.",
+  "charSet" : "utf-8",
+  "testFlag" : false,
+  "svrCode" : "TEST03",
+  "dummy" : null
+}
+2022-04-05 16:00:20,053 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - PARAM - {
+  "name" : "PARAM (air)",
+  "home" : "/Users/hanlim-air",
+  "base" : "/KANG/monster/20210320",
+  "infoPath" : "/json/info",
+  "dataPath" : "/json/data",
+  "basePath" : "/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/src/main/resources/json",
+  "campFile" : "camp.json",
+  "dummy" : null
+}
+2022-04-05 16:00:20,053 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - JOB  -- {
+  "name" : "JOB (air)",
+  "dummy" : null
+}
+2022-04-05 16:00:20,053 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - JSON -- {
+  "name" : "JSON (air)",
+  "dummy" : null
+}
+2022-04-05 16:00:20,054 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - URL  -- {
+  "name" : "URL (air)",
+  "dummy" : null
+}
+2022-04-05 16:00:20,054 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobLoad()#41 {}
+2022-04-05 16:00:20,054 INFO  [main      ] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.doing()#15 {}
+2022-04-05 16:00:20,054 INFO  [main      ] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.loadTblCamp()#28 {}
+2022-04-05 16:00:20,054 INFO  [main      ] [o.t.w.l.tables.TblCampLoader  ] - HANLIM-20220404 >>>>> org.tain.working.load.tables.TblCampLoader.loading()#31 {}
+2022-04-05 16:00:20,202 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+4. select tblcamp0_.id as id1_0_, tblcamp0_.camp_code as camp_cod2_0_, tblcamp0_.camp_content 
+as camp_con3_0_ from tbl_camp tblcamp0_ 
+ {executed in 5 msec}
+2022-04-05 16:00:20,209 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|1  |C001      |AAA          |
+|2  |C002      |AAB          |
+|---|----------|-------------|
+
+2022-04-05 16:00:20,256 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=1 
+ {executed in 8 msec}
+2022-04-05 16:00:20,263 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=2 
+ {executed in 3 msec}
+2022-04-05 16:00:20,306 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+5. select tblcamp0_.id as id1_0_0_, tblcamp0_.camp_code as camp_cod2_0_0_, tblcamp0_.camp_content 
+as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=1 
+ {executed in 1 msec}
+2022-04-05 16:00:20,307 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 16:00:20,312 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+5. insert into tbl_camp (camp_code, camp_content, id) values ('C001', 'AAA', 1) 
+ {executed in 1 msec}
+2022-04-05 16:00:20,315 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+6. select tblcamp0_.id as id1_0_0_, tblcamp0_.camp_code as camp_cod2_0_0_, tblcamp0_.camp_content 
+as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=2 
+ {executed in 1 msec}
+2022-04-05 16:00:20,316 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 16:00:20,318 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+6. insert into tbl_camp (camp_code, camp_content, id) values ('C002', 'AAB', 2) 
+ {executed in 2 msec}
+2022-04-05 16:00:28,109 INFO  [http-nio-8080-exec-1] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-05 16:00:28,110 INFO  [http-nio-8080-exec-1] [o.s.w.s.DispatcherServlet     ] - Initializing Servlet 'dispatcherServlet'
+2022-04-05 16:00:28,115 INFO  [http-nio-8080-exec-1] [o.s.w.s.DispatcherServlet     ] - Completed initialization in 5 ms
+2022-04-05 16:13:45,561 INFO  [RMI TCP Connection(17)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-04-05 16:13:45,625 INFO  [RMI TCP Connection(17)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 16:14:10,091 INFO  [main      ] [o.t.RestApiPractice07Application] - Starting RestApiPractice07Application using Java 1.8.0_321 on hanlim-airui-MacBookAir.local with PID 2899 (/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/bin/main started by hanlim_air in /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07)
+2022-04-05 16:14:10,092 INFO  [main      ] [o.t.RestApiPractice07Application] - The following profiles are active: proj-default,proj-air
+2022-04-05 16:14:10,800 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 16:14:10,863 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 57 ms. Found 1 JPA repository interfaces.
+2022-04-05 16:14:11,497 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat initialized with port(s): 8080 (http)
+2022-04-05 16:14:11,505 INFO  [main      ] [o.a.c.core.StandardService    ] - Starting service [Tomcat]
+2022-04-05 16:14:11,505 INFO  [main      ] [o.a.c.core.StandardEngine     ] - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-04-05 16:14:11,564 INFO  [main      ] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring embedded WebApplicationContext
+2022-04-05 16:14:11,564 INFO  [main      ] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1435 ms
+2022-04-05 16:14:11,709 INFO  [main      ] [o.s.b.a.h.H2ConsoleAutoConfiguration] - H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9092/monsterdb'
+2022-04-05 16:14:12,000 INFO  [main      ] [o.h.j.internal.util.LogHelper ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 16:14:12,025 INFO  [main      ] [org.hibernate.Version         ] - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-04-05 16:14:12,108 INFO  [main      ] [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-05 16:14:12,163 INFO  [main      ] [org.hibernate.dialect.Dialect ] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-05 16:14:12,526 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:42)
+3. select * from INFORMATION_SCHEMA.SEQUENCES 
+ {executed in 5 msec}
+2022-04-05 16:14:12,536 INFO  [main      ] [jdbc.resultsettable           ] - 
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+|sequence_catalog |sequence_schema |sequence_name |current_value |increment |is_generated |remarks |cache |min_value |max_value           |is_cycle |id |
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+|MONSTERDB        |PUBLIC          |CDITM_SEQ     |355           |1         |false        |        |32    |1         |9223372036854775807 |false    |54 |
+|MONSTERDB        |PUBLIC          |ROLE_SEQ      |178           |1         |false        |        |32    |1         |9223372036854775807 |false    |61 |
+|MONSTERDB        |PUBLIC          |ORG_SEQ       |169           |1         |false        |        |32    |1         |9223372036854775807 |false    |59 |
+|MONSTERDB        |PUBLIC          |CDMST_SEQ     |187           |1         |false        |        |32    |1         |9223372036854775807 |false    |55 |
+|MONSTERDB        |PUBLIC          |CMD_SEQ       |305           |1         |false        |        |32    |1         |9223372036854775807 |false    |56 |
+|MONSTERDB        |PUBLIC          |ROLEUSR_SEQ   |187           |1         |false        |        |32    |1         |9223372036854775807 |false    |62 |
+|MONSTERDB        |PUBLIC          |GRPSVR_SEQ    |387           |1         |false        |        |32    |1         |9223372036854775807 |false    |58 |
+|MONSTERDB        |PUBLIC          |USR_SEQ       |347           |1         |false        |        |32    |1         |9223372036854775807 |false    |64 |
+|MONSTERDB        |PUBLIC          |BRW_SEQ       |196           |1         |false        |        |32    |1         |9223372036854775807 |false    |53 |
+|MONSTERDB        |PUBLIC          |RESULT_SEQ    |128           |1         |false        |        |32    |1         |9223372036854775807 |false    |60 |
+|MONSTERDB        |PUBLIC          |SVR_SEQ       |237           |1         |false        |        |32    |1         |9223372036854775807 |false    |63 |
+|MONSTERDB        |PUBLIC          |GRP_SEQ       |196           |1         |false        |        |32    |1         |9223372036854775807 |false    |57 |
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+
+2022-04-05 16:14:12,602 INFO  [main      ] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 16:14:12,608 INFO  [main      ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 16:14:13,014 INFO  [main      ] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> START org.tain.files.FileSystemStorageService.start()#31
+2022-04-05 16:14:13,016 INFO  [main      ] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> END   org.tain.files.FileSystemStorageService.start()#34, rootLocation: FILES
+2022-04-05 16:14:13,018 INFO  [main      ] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> START org.tain.tools.Tools.startTools()#15 {}
+2022-04-05 16:14:13,019 INFO  [main      ] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> END   org.tain.tools.Tools.startTools()#20 {}
+2022-04-05 16:14:13,743 WARN  [main      ] [o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] - Cannot find template location: classpath:templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-05 16:14:14,050 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat started on port(s): 8080 (http) with context path '/v0.1'
+2022-04-05 16:14:14,074 INFO  [main      ] [o.t.RestApiPractice07Application] - Started RestApiPractice07Application in 4.49 seconds (JVM running for 5.125)
+2022-04-05 16:14:14,078 INFO  [main      ] [o.t.RestApiPractice07Application] - HANLIM-20220404 >>>>> org.tain.RestApiPractice07Application.run()#32 {}
+2022-04-05 16:14:14,079 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.doing()#16 {}
+2022-04-05 16:14:14,079 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobProperties()#30 {}
+2022-04-05 16:14:14,079 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - HANLIM-20220404 >>>>> org.tain.working.properties.PropertiesWorking.doing()#35 {}
+2022-04-05 16:14:14,115 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - BASE -- {
+  "name" : "Zotto API project",
+  "program" : "KieaZotto API program",
+  "version" : "ver 1.1_2021.04.01",
+  "comment" : "This is Zotto API project.",
+  "charSet" : "utf-8",
+  "testFlag" : false,
+  "svrCode" : "TEST03",
+  "dummy" : null
+}
+2022-04-05 16:14:14,117 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - PARAM - {
+  "name" : "PARAM (air)",
+  "home" : "/Users/hanlim-air",
+  "base" : "/KANG/monster/20210320",
+  "infoPath" : "/json/info",
+  "dataPath" : "/json/data",
+  "basePath" : "/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/src/main/resources/json",
+  "campFile" : "camp.json",
+  "dummy" : null
+}
+2022-04-05 16:14:14,118 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - JOB  -- {
+  "name" : "JOB (air)",
+  "dummy" : null
+}
+2022-04-05 16:14:14,119 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - JSON -- {
+  "name" : "JSON (air)",
+  "dummy" : null
+}
+2022-04-05 16:14:14,119 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - URL  -- {
+  "name" : "URL (air)",
+  "dummy" : null
+}
+2022-04-05 16:14:14,119 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobLoad()#41 {}
+2022-04-05 16:14:14,119 INFO  [main      ] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.doing()#15 {}
+2022-04-05 16:14:14,119 INFO  [main      ] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.loadTblCamp()#28 {}
+2022-04-05 16:14:14,119 INFO  [main      ] [o.t.w.l.tables.TblCampLoader  ] - HANLIM-20220404 >>>>> org.tain.working.load.tables.TblCampLoader.loading()#31 {}
+2022-04-05 16:14:14,266 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+4. select tblcamp0_.id as id1_0_, tblcamp0_.camp_code as camp_cod2_0_, tblcamp0_.camp_content 
+as camp_con3_0_ from tbl_camp tblcamp0_ 
+ {executed in 2 msec}
+2022-04-05 16:14:14,269 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 16:14:14,336 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+5. select tblcamp0_.id as id1_0_0_, tblcamp0_.camp_code as camp_cod2_0_0_, tblcamp0_.camp_content 
+as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=1 
+ {executed in 1 msec}
+2022-04-05 16:14:14,338 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 16:14:14,352 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+5. insert into tbl_camp (camp_code, camp_content, id) values ('C001', 'AAA', 1) 
+ {executed in 1 msec}
+2022-04-05 16:14:14,360 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+6. select tblcamp0_.id as id1_0_0_, tblcamp0_.camp_code as camp_cod2_0_0_, tblcamp0_.camp_content 
+as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=2 
+ {executed in 1 msec}
+2022-04-05 16:14:14,361 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 16:14:14,362 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+6. insert into tbl_camp (camp_code, camp_content, id) values ('C002', 'AAB', 2) 
+ {executed in 0 msec}
+2022-04-05 16:14:26,447 INFO  [http-nio-8080-exec-1] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-05 16:14:26,448 INFO  [http-nio-8080-exec-1] [o.s.w.s.DispatcherServlet     ] - Initializing Servlet 'dispatcherServlet'
+2022-04-05 16:14:26,452 INFO  [http-nio-8080-exec-1] [o.s.w.s.DispatcherServlet     ] - Completed initialization in 4 ms
+2022-04-05 16:14:26,494 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> ip.info: 0:0:0:0:0:0:0:1
+2022-04-05 16:14:26,495 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> request.headers: [user-agent:"PostmanRuntime/7.29.0", accept:"*/*", postman-token:"8c4c7cf9-c8a4-484c-b415-aba9b8441b76", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"762", Content-Type:"application/json;charset=UTF-8"]
+2022-04-05 16:14:26,495 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> request.body: [ {
+  "id" : 100,
+  "campCode" : "code100",
+  "campContent" : "content100"
+}, {
+  "id" : 101,
+  "campCode" : "code101",
+  "campContent" : "content101"
+}, {
+  "id" : 102,
+  "campCode" : "code102",
+  "campContent" : "content102"
+}, {
+  "id" : 103,
+  "campCode" : "code103",
+  "campContent" : "content103"
+}, {
+  "id" : 104,
+  "campCode" : "code104",
+  "campContent" : "content104"
+}, {
+  "id" : 105,
+  "campCode" : "code105",
+  "campContent" : "content105"
+}, {
+  "id" : 106,
+  "campCode" : "code106",
+  "campContent" : "content106"
+}, {
+  "id" : 107,
+  "campCode" : "code107",
+  "campContent" : "content107"
+}, {
+  "id" : 108,
+  "campCode" : "code108",
+  "campContent" : "content108"
+}, {
+  "id" : 109,
+  "campCode" : "code109",
+  "campContent" : "content109"
+} ]
+2022-04-05 16:14:26,509 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> ret: 0
+2022-04-05 16:26:31,593 INFO  [RMI TCP Connection(17)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-04-05 16:26:31,672 INFO  [RMI TCP Connection(17)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 16:26:33,512 INFO  [main      ] [o.t.RestApiPractice07Application] - Starting RestApiPractice07Application using Java 1.8.0_321 on hanlim-airui-MacBookAir.local with PID 3078 (/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/bin/main started by hanlim_air in /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07)
+2022-04-05 16:26:33,513 INFO  [main      ] [o.t.RestApiPractice07Application] - The following profiles are active: proj-default,proj-air
+2022-04-05 16:26:34,202 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 16:26:34,293 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 86 ms. Found 1 JPA repository interfaces.
+2022-04-05 16:26:34,935 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat initialized with port(s): 8080 (http)
+2022-04-05 16:26:34,943 INFO  [main      ] [o.a.c.core.StandardService    ] - Starting service [Tomcat]
+2022-04-05 16:26:34,943 INFO  [main      ] [o.a.c.core.StandardEngine     ] - Starting Servlet engine: [Apache Tomcat/9.0.48]
+2022-04-05 16:26:35,000 INFO  [main      ] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring embedded WebApplicationContext
+2022-04-05 16:26:35,001 INFO  [main      ] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1449 ms
+2022-04-05 16:26:35,166 INFO  [main      ] [o.s.b.a.h.H2ConsoleAutoConfiguration] - H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9092/monsterdb'
+2022-04-05 16:26:35,464 INFO  [main      ] [o.h.j.internal.util.LogHelper ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 16:26:35,489 INFO  [main      ] [org.hibernate.Version         ] - HHH000412: Hibernate ORM core version 5.4.32.Final
+2022-04-05 16:26:35,573 INFO  [main      ] [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-05 16:26:35,630 INFO  [main      ] [org.hibernate.dialect.Dialect ] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-05 16:26:36,027 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:42)
+3. select * from INFORMATION_SCHEMA.SEQUENCES 
+ {executed in 11 msec}
+2022-04-05 16:26:36,036 INFO  [main      ] [jdbc.resultsettable           ] - 
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+|sequence_catalog |sequence_schema |sequence_name |current_value |increment |is_generated |remarks |cache |min_value |max_value           |is_cycle |id |
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+|MONSTERDB        |PUBLIC          |CDITM_SEQ     |355           |1         |false        |        |32    |1         |9223372036854775807 |false    |54 |
+|MONSTERDB        |PUBLIC          |ROLE_SEQ      |178           |1         |false        |        |32    |1         |9223372036854775807 |false    |61 |
+|MONSTERDB        |PUBLIC          |ORG_SEQ       |169           |1         |false        |        |32    |1         |9223372036854775807 |false    |59 |
+|MONSTERDB        |PUBLIC          |CDMST_SEQ     |187           |1         |false        |        |32    |1         |9223372036854775807 |false    |55 |
+|MONSTERDB        |PUBLIC          |CMD_SEQ       |305           |1         |false        |        |32    |1         |9223372036854775807 |false    |56 |
+|MONSTERDB        |PUBLIC          |ROLEUSR_SEQ   |187           |1         |false        |        |32    |1         |9223372036854775807 |false    |62 |
+|MONSTERDB        |PUBLIC          |GRPSVR_SEQ    |387           |1         |false        |        |32    |1         |9223372036854775807 |false    |58 |
+|MONSTERDB        |PUBLIC          |USR_SEQ       |347           |1         |false        |        |32    |1         |9223372036854775807 |false    |64 |
+|MONSTERDB        |PUBLIC          |BRW_SEQ       |196           |1         |false        |        |32    |1         |9223372036854775807 |false    |53 |
+|MONSTERDB        |PUBLIC          |RESULT_SEQ    |128           |1         |false        |        |32    |1         |9223372036854775807 |false    |60 |
+|MONSTERDB        |PUBLIC          |SVR_SEQ       |237           |1         |false        |        |32    |1         |9223372036854775807 |false    |63 |
+|MONSTERDB        |PUBLIC          |GRP_SEQ       |196           |1         |false        |        |32    |1         |9223372036854775807 |false    |57 |
+|-----------------|----------------|--------------|--------------|----------|-------------|--------|------|----------|--------------------|---------|---|
+
+2022-04-05 16:26:36,105 INFO  [main      ] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 16:26:36,114 INFO  [main      ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 16:26:36,571 INFO  [main      ] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> START org.tain.files.FileSystemStorageService.start()#31
+2022-04-05 16:26:36,574 INFO  [main      ] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> END   org.tain.files.FileSystemStorageService.start()#34, rootLocation: FILES
+2022-04-05 16:26:36,577 INFO  [main      ] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> START org.tain.tools.Tools.startTools()#15 {}
+2022-04-05 16:26:36,577 INFO  [main      ] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> END   org.tain.tools.Tools.startTools()#20 {}
+2022-04-05 16:26:37,282 WARN  [main      ] [o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] - Cannot find template location: classpath:templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-05 16:26:37,585 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat started on port(s): 8080 (http) with context path '/v0.1'
+2022-04-05 16:26:37,598 INFO  [main      ] [o.t.RestApiPractice07Application] - Started RestApiPractice07Application in 4.592 seconds (JVM running for 5.287)
+2022-04-05 16:26:37,600 INFO  [main      ] [o.t.RestApiPractice07Application] - HANLIM-20220404 >>>>> org.tain.RestApiPractice07Application.run()#32 {}
+2022-04-05 16:26:37,600 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.doing()#16 {}
+2022-04-05 16:26:37,600 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobProperties()#30 {}
+2022-04-05 16:26:37,600 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - HANLIM-20220404 >>>>> org.tain.working.properties.PropertiesWorking.doing()#35 {}
+2022-04-05 16:26:37,629 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - BASE -- {
+  "name" : "Zotto API project",
+  "program" : "KieaZotto API program",
+  "version" : "ver 1.1_2021.04.01",
+  "comment" : "This is Zotto API project.",
+  "charSet" : "utf-8",
+  "testFlag" : false,
+  "svrCode" : "TEST03",
+  "dummy" : null
+}
+2022-04-05 16:26:37,630 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - PARAM - {
+  "name" : "PARAM (air)",
+  "home" : "/Users/hanlim-air",
+  "base" : "/KANG/monster/20210320",
+  "infoPath" : "/json/info",
+  "dataPath" : "/json/data",
+  "basePath" : "/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-07/src/main/resources/json",
+  "campFile" : "camp.json",
+  "dummy" : null
+}
+2022-04-05 16:26:37,631 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - JOB  -- {
+  "name" : "JOB (air)",
+  "dummy" : null
+}
+2022-04-05 16:26:37,631 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - JSON -- {
+  "name" : "JSON (air)",
+  "dummy" : null
+}
+2022-04-05 16:26:37,632 INFO  [main      ] [o.t.w.p.PropertiesWorking     ] - >>>>> - URL  -- {
+  "name" : "URL (air)",
+  "dummy" : null
+}
+2022-04-05 16:26:37,632 INFO  [main      ] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobLoad()#41 {}
+2022-04-05 16:26:37,632 INFO  [main      ] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.doing()#15 {}
+2022-04-05 16:26:37,632 INFO  [main      ] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.loadTblCamp()#28 {}
+2022-04-05 16:26:37,632 INFO  [main      ] [o.t.w.l.tables.TblCampLoader  ] - HANLIM-20220404 >>>>> org.tain.working.load.tables.TblCampLoader.loading()#31 {}
+2022-04-05 16:26:37,747 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+4. select tblcamp0_.id as id1_0_, tblcamp0_.camp_code as camp_cod2_0_, tblcamp0_.camp_content 
+as camp_con3_0_ from tbl_camp tblcamp0_ 
+ {executed in 3 msec}
+2022-04-05 16:26:37,754 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|1  |C001      |AAA          |
+|2  |C002      |AAB          |
+|---|----------|-------------|
+
+2022-04-05 16:26:37,796 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=1 
+ {executed in 4 msec}
+2022-04-05 16:26:37,801 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+4. delete from tbl_camp where id=2 
+ {executed in 2 msec}
+2022-04-05 16:26:37,850 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+5. select tblcamp0_.id as id1_0_0_, tblcamp0_.camp_code as camp_cod2_0_0_, tblcamp0_.camp_content 
+as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=1 
+ {executed in 1 msec}
+2022-04-05 16:26:37,852 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 16:26:37,858 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+5. insert into tbl_camp (camp_code, camp_content, id) values ('C001', 'AAA', 1) 
+ {executed in 0 msec}
+2022-04-05 16:26:37,865 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.extract(ResultSetReturnImpl.java:57)
+6. select tblcamp0_.id as id1_0_0_, tblcamp0_.camp_code as camp_cod2_0_0_, tblcamp0_.camp_content 
+as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=2 
+ {executed in 0 msec}
+2022-04-05 16:26:37,865 INFO  [main      ] [jdbc.resultsettable           ] - 
+|---|----------|-------------|
+|id |camp_code |camp_content |
+|---|----------|-------------|
+|---|----------|-------------|
+
+2022-04-05 16:26:37,867 DEBUG [main      ] [jdbc.sqltiming                ] -  org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
+6. insert into tbl_camp (camp_code, camp_content, id) values ('C002', 'AAB', 2) 
+ {executed in 1 msec}
+2022-04-05 16:26:51,734 INFO  [http-nio-8080-exec-2] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-05 16:26:51,735 INFO  [http-nio-8080-exec-2] [o.s.w.s.DispatcherServlet     ] - Initializing Servlet 'dispatcherServlet'
+2022-04-05 16:26:51,739 INFO  [http-nio-8080-exec-2] [o.s.w.s.DispatcherServlet     ] - Completed initialization in 4 ms
+2022-04-05 16:26:51,787 INFO  [http-nio-8080-exec-2] [o.t.c.rest.CampController     ] - >>>>> ip.info: 0:0:0:0:0:0:0:1
+2022-04-05 16:26:51,789 INFO  [http-nio-8080-exec-2] [o.t.c.rest.CampController     ] - >>>>> request.headers: [user-agent:"PostmanRuntime/7.29.0", accept:"*/*", postman-token:"b7280089-223f-4ccb-821b-72b176d1d94b", host:"localhost:8080", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"762", Content-Type:"application/json;charset=UTF-8"]
+2022-04-05 16:26:51,789 INFO  [http-nio-8080-exec-2] [o.t.c.rest.CampController     ] - >>>>> request.body: [ {
+  "id" : 100,
+  "campCode" : "code100",
+  "campContent" : "content100"
+}, {
+  "id" : 101,
+  "campCode" : "code101",
+  "campContent" : "content101"
+}, {
+  "id" : 102,
+  "campCode" : "code102",
+  "campContent" : "content102"
+}, {
+  "id" : 103,
+  "campCode" : "code103",
+  "campContent" : "content103"
+}, {
+  "id" : 104,
+  "campCode" : "code104",
+  "campContent" : "content104"
+}, {
+  "id" : 105,
+  "campCode" : "code105",
+  "campContent" : "content105"
+}, {
+  "id" : 106,
+  "campCode" : "code106",
+  "campContent" : "content106"
+}, {
+  "id" : 107,
+  "campCode" : "code107",
+  "campContent" : "content107"
+}, {
+  "id" : 108,
+  "campCode" : "code108",
+  "campContent" : "content108"
+}, {
+  "id" : 109,
+  "campCode" : "code109",
+  "campContent" : "content109"
+} ]
+2022-04-05 16:26:51,819 DEBUG [http-nio-8080-exec-2] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+7. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 100 , 'code100' , 'content100' 
+) 
+ {executed in 1 msec}
+2022-04-05 16:26:51,820 DEBUG [http-nio-8080-exec-2] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+8. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 101 , 'code101' , 'content101' 
+) 
+ {executed in 0 msec}
+2022-04-05 16:26:51,821 DEBUG [http-nio-8080-exec-2] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+9. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 102 , 'code102' , 'content102' 
+) 
+ {executed in 0 msec}
+2022-04-05 16:26:51,821 DEBUG [http-nio-8080-exec-2] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+10. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 103 , 'code103' , 'content103' 
+) 
+ {executed in 0 msec}
+2022-04-05 16:26:51,824 DEBUG [http-nio-8080-exec-2] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+11. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 104 , 'code104' , 'content104' 
+) 
+ {executed in 1 msec}
+2022-04-05 16:26:51,825 DEBUG [http-nio-8080-exec-2] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+12. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 105 , 'code105' , 'content105' 
+) 
+ {executed in 0 msec}
+2022-04-05 16:26:51,826 DEBUG [http-nio-8080-exec-2] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+13. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 106 , 'code106' , 'content106' 
+) 
+ {executed in 1 msec}
+2022-04-05 16:26:51,829 DEBUG [http-nio-8080-exec-2] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+14. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 107 , 'code107' , 'content107' 
+) 
+ {executed in 3 msec}
+2022-04-05 16:26:51,831 DEBUG [http-nio-8080-exec-2] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+15. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 108 , 'code108' , 'content108' 
+) 
+ {executed in 0 msec}
+2022-04-05 16:26:51,832 DEBUG [http-nio-8080-exec-2] [jdbc.sqltiming                ] -  org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+16. INSERT INTO tbl_camp ( id , camp_code , camp_content ) VALUES ( 109 , 'code109' , 'content109' 
+) 
+ {executed in 1 msec}
+2022-04-05 16:26:51,832 INFO  [http-nio-8080-exec-2] [o.t.c.rest.CampController     ] - >>>>> ret: 1

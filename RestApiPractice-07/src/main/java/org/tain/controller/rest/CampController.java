@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.tain.mybatis.mappers.CampMapper;
 import org.tain.utils.IpPrint;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import lombok.extern.slf4j.Slf4j;
@@ -56,6 +57,27 @@ public class CampController {
 		return new ResponseEntity<>(lst, headers, HttpStatus.OK);
 	}
 	
+	/*
+	@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST}, maxAge = 3600)
+	@RequestMapping(value = {"/save"}, method = {RequestMethod.GET, RequestMethod.POST})
+	public ResponseEntity<?> save(HttpEntity<String> httpEntity) throws Exception {
+		
+		int ret = 0;
+		if (Boolean.TRUE) {
+			Map<String,Object> mapIn = new ObjectMapper().readValue(body, Map.class);
+			ret = this.campMapper.insertOne(mapIn);
+			log.info(">>>>> ret: {}", ret);
+		}
+		
+		MultiValueMap<String,String> headers = null;
+		if (Boolean.TRUE) {
+			headers = new LinkedMultiValueMap<>();
+			headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+		}
+		return new ResponseEntity<>(ret, headers, HttpStatus.OK);
+	}
+	*/
+	
 	@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST}, maxAge = 3600)
 	@RequestMapping(value = {"/save"}, method = {RequestMethod.GET, RequestMethod.POST})
 	public ResponseEntity<?> save(HttpEntity<String> httpEntity) throws Exception {
@@ -70,8 +92,13 @@ public class CampController {
 		
 		int ret = 0;
 		if (Boolean.TRUE) {
-			Map<String,Object> mapIn = new ObjectMapper().readValue(body, Map.class);
-			ret = this.campMapper.insertOne(mapIn);
+			ObjectMapper objectMapper = new ObjectMapper();
+			List<Map<String,Object>> listMap = objectMapper.readValue(body, new TypeReference<List<Map<String,Object>>>() {});
+			//String jsonPretty = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(listMap);
+			//System.out.println(">>> " + jsonPretty);
+			for (Map<String,Object> map : listMap) {
+				ret = this.campMapper.insertOne(map);
+			}
 			log.info(">>>>> ret: {}", ret);
 		}
 		
