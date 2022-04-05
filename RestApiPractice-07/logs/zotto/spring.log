@@ -1117,3 +1117,5 @@ as camp_con3_0_0_ from tbl_camp tblcamp0_ where tblcamp0_.id=2
 ) 
  {executed in 1 msec}
 2022-04-05 16:26:51,832 INFO  [http-nio-8080-exec-2] [o.t.c.rest.CampController     ] - >>>>> ret: 1
+2022-04-05 18:30:41,469 INFO  [RMI TCP Connection(94)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-04-05 18:30:41,544 INFO  [RMI TCP Connection(94)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'

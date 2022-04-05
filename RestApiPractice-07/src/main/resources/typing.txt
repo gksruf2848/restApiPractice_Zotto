@@ -1,0 +1,27 @@
+public class httpconection privata static boolean flag true;
+private static falnal int conntimeout30 private stiatidd
+private static fanla readtimeout10 private static famal string useragent
+mozilla 4 public statstring private static final string user agent moazilla
+public static string getrespon final map string object root
+string url string root get rul string root getordefault method get
+method method touppercase if flag system.out.pritnln url s method s url method
+httpurlconnection con null stringbuffer sb new stringbuffer try url obj
+con setdefaultusecches true con set connecttimeout nonn timeout fc system.out.println get readtimeout
+con getreadtimeout if true con set requestpropecons setrequestproperty 
+string getresponse final map string object root string url string root get url
+string method string root getordefault method get
+method method touppercasemethod string root getresponse final map string object root
+string strres httpconnection getresponse root if flag objectmapper objectmapper
+new objectmapper public static void main string args throw exception
+map string object root null if flag rot new hashmaproot put url string url
+root get url string method root getordefault method getif flag rot put method get
+if flag map string object header new hashmap root put header header root put method get
+if flag map string object header map string object header new hashmap
+root put header header map string object properties new hashmap
+properties root.put properties properties if flag String erquest string eques null
+request "" root put request request system.outprintln request string request null
+request root.put equest requtest if flag string request """
+root put request request string request """ root pust
+try url obj new url url con http url connection obj openconnection con set request method method
+if flag con setdefault usecaches true con ser dinnen set connect timaout conn timeout 1000 con set readtim read timeout 1000
+system.out.prontin getdefualtsuf 
