@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.tain.mybatis.mappers.CampMapper;
 import org.tain.utils.IpPrint;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
@@ -30,7 +32,7 @@ public class CampController {
 	
 	@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST}, maxAge = 3600)
 	@RequestMapping(value = {"/camps"}, method = {RequestMethod.GET, RequestMethod.POST})
-	public ResponseEntity<?> test(HttpEntity<String> httpEntity) {
+	public ResponseEntity<?> test(HttpEntity<String> httpEntity) throws Exception {
 		if (Boolean.TRUE) {
 			HttpHeaders headers = httpEntity.getHeaders();
 			String body = httpEntity.getBody();
@@ -52,5 +54,32 @@ public class CampController {
 			headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
 		}
 		return new ResponseEntity<>(lst, headers, HttpStatus.OK);
+	}
+	
+	@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST}, maxAge = 3600)
+	@RequestMapping(value = {"/save"}, method = {RequestMethod.GET, RequestMethod.POST})
+	public ResponseEntity<?> save(HttpEntity<String> httpEntity) throws Exception {
+		String body = "";
+		if (Boolean.TRUE) {
+			HttpHeaders headers = httpEntity.getHeaders();
+			body = httpEntity.getBody();
+			log.info(">>>>> ip.info: " + IpPrint.get());
+			log.info(">>>>> request.headers: " + headers.toString());
+			log.info(">>>>> request.body: " + body);
+		}
+		
+		int ret = 0;
+		if (Boolean.TRUE) {
+			Map<String,Object> mapIn = new ObjectMapper().readValue(body, Map.class);
+			ret = this.campMapper.insertOne(mapIn);
+			log.info(">>>>> ret: {}", ret);
+		}
+		
+		MultiValueMap<String,String> headers = null;
+		if (Boolean.TRUE) {
+			headers = new LinkedMultiValueMap<>();
+			headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
+		}
+		return new ResponseEntity<>(ret, headers, HttpStatus.OK);
 	}
 }

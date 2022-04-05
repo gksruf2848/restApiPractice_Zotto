@@ -17,5 +17,22 @@
 			and camp_code = #{campCode}
 		</if>
 	</select>
+	
+	<!-- insert -->
+	<insert id="insertOne" parameterType="CamelMap">
+		INSERT INTO tbl_camp
+			(
+				id
+				, camp_code
+				, camp_content
+			)
+		VALUES
+			(
+				#{id}
+				, #{campCode}
+				, #{campContent}
+			)
+	
+	</insert>
 
 </mapper>
