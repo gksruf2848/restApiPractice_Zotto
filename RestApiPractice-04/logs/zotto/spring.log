@@ -1250,3 +1250,70 @@ select
 2022-04-05 00:14:19,094 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> request.headers: [host:"localhost:8080", connection:"keep-alive", cache-control:"max-age=0", sec-ch-ua:"" Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"", sec-ch-ua-mobile:"?0", sec-ch-ua-platform:""macOS"", upgrade-insecure-requests:"1", user-agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.84 Safari/537.36", accept:"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9", sec-fetch-site:"none", sec-fetch-mode:"navigate", sec-fetch-user:"?1", sec-fetch-dest:"document", accept-encoding:"gzip, deflate, br", accept-language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", cookie:"_dd_s=logs=1&id=9a2f4a64-4e99-486f-882f-15f16bd812d2&created=1649084050679&expire=1649086156385"]
 2022-04-05 00:14:19,095 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> request.body: null
 2022-04-05 00:14:19,146 INFO  [http-nio-8080-exec-1] [o.t.c.rest.CampController     ] - >>>>> lst: [{campContent=AAA, campCode=C001, id=1}, {campContent=AAB, campCode=C002, id=2}]
+2022-04-05 00:29:14,775 INFO  [Thread-17 ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 00:29:15,013 INFO  [restartedMain] [o.t.RestApiPractice04Application] - HANLIM-20220404 >>>>> org.tain.RestApiPractice04Application.main()#20 2022-04-05T00:29:15.013
+2022-04-05 00:29:15,323 INFO  [restartedMain] [o.t.RestApiPractice04Application] - Starting RestApiPractice04Application using Java 1.8.0_321 on hanlim-airui-MacBookAir.local with PID 8856 (/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-04/bin/main started by hanlim_air in /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-04)
+2022-04-05 00:29:15,325 INFO  [restartedMain] [o.t.RestApiPractice04Application] - The following 2 profiles are active: "proj-default", "proj-air"
+2022-04-05 00:29:15,654 INFO  [restartedMain] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-05 00:29:15,669 INFO  [restartedMain] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 12 ms. Found 1 JPA repository interfaces.
+2022-04-05 00:29:15,780 INFO  [restartedMain] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat initialized with port(s): 8080 (http)
+2022-04-05 00:29:15,781 INFO  [restartedMain] [o.a.c.core.StandardService    ] - Starting service [Tomcat]
+2022-04-05 00:29:15,781 INFO  [restartedMain] [o.a.c.core.StandardEngine     ] - Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-04-05 00:29:15,789 INFO  [restartedMain] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring embedded WebApplicationContext
+2022-04-05 00:29:15,789 INFO  [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 445 ms
+2022-04-05 00:29:15,827 INFO  [restartedMain] [o.s.b.a.h.H2ConsoleAutoConfiguration] - H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9092/monsterdb'
+2022-04-05 00:29:15,851 INFO  [restartedMain] [o.h.j.internal.util.LogHelper ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-05 00:29:15,857 INFO  [restartedMain] [org.hibernate.dialect.Dialect ] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-04-05 00:29:15,935 INFO  [restartedMain] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-05 00:29:15,935 INFO  [restartedMain] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-05 00:29:16,087 INFO  [restartedMain] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> START org.tain.files.FileSystemStorageService.start()#31
+2022-04-05 00:29:16,090 INFO  [restartedMain] [o.t.f.FileSystemStorageService] - HANLIM-20220404 >>>>> END   org.tain.files.FileSystemStorageService.start()#34, rootLocation: FILES
+2022-04-05 00:29:16,092 INFO  [restartedMain] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> START org.tain.tools.Tools.startTools()#15 {}
+2022-04-05 00:29:16,092 INFO  [restartedMain] [org.tain.tools.Tools          ] - HANLIM-20220404 >>>>> END   org.tain.tools.Tools.startTools()#20 {}
+2022-04-05 00:29:16,263 WARN  [restartedMain] [o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration] - Cannot find template location: classpath:templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-05 00:29:16,340 INFO  [restartedMain] [o.s.b.d.a.OptionalLiveReloadServer] - LiveReload server is running on port 35729
+2022-04-05 00:29:16,360 INFO  [restartedMain] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat started on port(s): 8080 (http) with context path '/v0.1'
+2022-04-05 00:29:16,367 INFO  [restartedMain] [o.t.RestApiPractice04Application] - Started RestApiPractice04Application in 1.329 seconds (JVM running for 1311.48)
+2022-04-05 00:29:16,369 INFO  [restartedMain] [o.t.RestApiPractice04Application] - HANLIM-20220404 >>>>> org.tain.RestApiPractice04Application.run()#32 {}
+2022-04-05 00:29:16,369 INFO  [restartedMain] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.doing()#16 {}
+2022-04-05 00:29:16,369 INFO  [restartedMain] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobProperties()#30 {}
+2022-04-05 00:29:16,369 INFO  [restartedMain] [o.t.w.p.PropertiesWorking     ] - HANLIM-20220404 >>>>> org.tain.working.properties.PropertiesWorking.doing()#35 {}
+2022-04-05 00:29:16,378 INFO  [restartedMain] [o.t.w.p.PropertiesWorking     ] - >>>>> - BASE -- {
+  "name" : "Zotto API project",
+  "program" : "KieaZotto API program",
+  "version" : "ver 1.1_2021.04.01",
+  "comment" : "This is Zotto API project.",
+  "charSet" : "utf-8",
+  "testFlag" : false,
+  "svrCode" : "TEST03",
+  "dummy" : null
+}
+2022-04-05 00:29:16,379 INFO  [restartedMain] [o.t.w.p.PropertiesWorking     ] - >>>>> - PARAM - {
+  "name" : "PARAM (air)",
+  "home" : "/Users/hanlim-air",
+  "base" : "/KANG/monster/20210320",
+  "infoPath" : "/json/info",
+  "dataPath" : "/json/data",
+  "basePath" : "/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-04/src/main/resources/json",
+  "campFile" : "camp.json",
+  "dummy" : null
+}
+2022-04-05 00:29:16,379 INFO  [restartedMain] [o.t.w.p.PropertiesWorking     ] - >>>>> - JOB  -- {
+  "name" : "JOB (air)",
+  "dummy" : null
+}
+2022-04-05 00:29:16,380 INFO  [restartedMain] [o.t.w.p.PropertiesWorking     ] - >>>>> - JSON -- {
+  "name" : "JSON (air)",
+  "dummy" : null
+}
+2022-04-05 00:29:16,380 INFO  [restartedMain] [o.t.w.p.PropertiesWorking     ] - >>>>> - URL  -- {
+  "name" : "URL (air)",
+  "dummy" : null
+}
+2022-04-05 00:29:16,380 INFO  [restartedMain] [org.tain.working.Working      ] - HANLIM-20220404 >>>>> org.tain.working.Working.jobLoad()#41 {}
+2022-04-05 00:29:16,380 INFO  [restartedMain] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.doing()#15 {}
+2022-04-05 00:29:16,380 INFO  [restartedMain] [o.t.working.load.LoadWorking  ] - HANLIM-20220404 >>>>> org.tain.working.load.LoadWorking.loadTblCamp()#28 {}
+2022-04-05 00:29:16,381 INFO  [restartedMain] [o.t.w.l.tables.TblCampLoader  ] - HANLIM-20220404 >>>>> org.tain.working.load.tables.TblCampLoader.loading()#31 {}
+2022-04-05 00:29:16,444 INFO  [restartedMain] [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] - Condition evaluation unchanged
+2022-04-05 00:29:17,544 INFO  [RMI TCP Connection(26)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-04-05 00:29:17,597 INFO  [RMI TCP Connection(26)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
