@@ -164,7 +164,7 @@ proj-env:
     info-path: /json/info
     data-path: /json/data
     
-    base-path: /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-04/src/main/resources/json
+    base-path: /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-09/src/main/resources/json
     camp-file:        camp.json
 
   job:

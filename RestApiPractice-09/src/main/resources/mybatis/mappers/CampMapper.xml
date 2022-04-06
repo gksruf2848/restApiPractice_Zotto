@@ -18,4 +18,19 @@
 		</if>
 	</select>
 
+	<!-- insert -->
+	<insert id="insertOne" parameterType="CamelMap">
+		insert into tbl_camp
+			(
+				id
+				, camp_code
+				, camp_content
+			)
+		values
+			(
+				#{id}
+				, #{campCode}
+				, #{campContent}
+			)
+	</insert>
 </mapper>
