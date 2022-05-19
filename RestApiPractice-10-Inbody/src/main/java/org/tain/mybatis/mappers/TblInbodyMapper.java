@@ -15,5 +15,5 @@ public interface TblInbodyMapper {
 	//int updateById(Map<String,Object> mapIn);
 	//List<Map<String,Object>> selectOne(Map<String,Object> mapIn);
 	int createTbl();
-	//int dropTbl();
+	int dropTbl();
 }

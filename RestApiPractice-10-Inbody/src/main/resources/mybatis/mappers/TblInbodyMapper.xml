@@ -31,4 +31,9 @@
 		)
 	</update>
 	
+	<!-- deleteTbl -->
+	<update id="dropTbl" parameterType="CamelMap">
+		drop table tbl_inbody
+	</update>
+	
 </mapper>
