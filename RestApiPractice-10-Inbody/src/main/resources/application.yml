@@ -32,7 +32,7 @@ spring:
       trace: false
       web-allow-others: true
   datasource:
-    url: jdbc:h2:tcp://localhost:9092/queuedb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:h2:tcp://localhost:9092/inbodydb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     #url: jdbc:log4jdbc:h2:tcp://localhost:9092/monsterdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
     driverClassName: org.h2.Driver
     #driverClassName: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
@@ -97,7 +97,7 @@ spring:
 # 
 logging:
   file:
-    path: logs/queue/
+    path: logs/inbody/
   logback.rollingpolicy:
     max-file-size: 10MB
     max-history: 30
@@ -140,14 +140,14 @@ spring.profiles: proj-default
 
 proj-env:
   base:
-    name: SAS Queue API project
-    program: KieaQueue API program
-    version: ver 1.1_2022.04.05
-    comment: This is SAS Queue API project.
+    name: Hanlim Inbody API project
+    program: Hanlim API program
+    version: ver 1.0_2022.05.19
+    comment: This is Hanlim Inbody API project.
     char-set: utf-8
     #test-flag: true
     test-flag: false
-    svr-code: TEST03
+    svr-code: TEST01
     async-size: 20
 
 ---
@@ -159,15 +159,13 @@ proj-env:
   param:
     name: PARAM (air)
     #home: /Users/kangmac
-    home: /Users/kang-air
+    home: /Users/hanlim_air
     base: /KANG/monster/20210320
     info-path: /json/info
     data-path: /json/data
     
-    base-path: /Users/kang-air/STS/GIT/KieaZotto/ver00.00/KieaZotto-02/src/main/resources/json
-    cust-file:      cust.json
-    cust-prod-file: cust_prod.json
-    prod-file:      prod.json
+    base-path: /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-10-Inbody/src/main/resources/json
+    inbody-file:      inbody.json
   job:
     name: JOB (air)
   json:
