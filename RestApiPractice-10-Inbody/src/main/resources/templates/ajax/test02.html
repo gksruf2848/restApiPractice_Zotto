@@ -216,13 +216,7 @@ body {
 
       <div style="padding-left:20px; margin-top:80px">
         <h2>만결숭이의 웹페이지에 오신 것을 환영합니다 !</h2>
-        <form>
-			<input id='in1' type='text' name='in1' value='B001' size='12'>
-			<input id='in2' type='text' name='in2' value='한글' size='12'>
-			<input id='in3' type='text' name='in3' value='123' size='12'><br>
-		</form>
-		<textarea id='check1' cols=50 rows=10></textarea><br><br>
-		<button id="btnAction1">click!</button><br>
+		<button id="btnAction1">select all !</button><br>
 		<textarea id='out1' cols=50 rows=10></textarea>
 		<br>
       </div>
@@ -260,7 +254,7 @@ body {
 					jQuery.each(arr, function() {
 						obj[this.name] = this.value;
 					});
-				}//if ( arr ) {
+				}
 			}
 		} catch (e) {
 			alert(e.message);
@@ -291,12 +285,6 @@ body {
 				contentType: "application/json; charset=utf-8",
 				data: null,
 				dataType: "json",
-				beforeSend: function() {
-					console.log("..." + $("form").serializeObject());
-					this.data = JSON.stringify($("form").serializeObject(), null, 2);
-					$('#check1').val(this.data);
-					console.log('beforeSend... data: ' + this.data);
-				}
 			})
 			.done(function(json) {
 				console.log('done.json: ' + JSON.stringify(json));
