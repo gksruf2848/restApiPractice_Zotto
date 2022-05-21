@@ -800,3 +800,130 @@ select
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.lang.Thread.run(Thread.java:750)
 2022-05-20 19:01:14,004 INFO  [http-nio-8088-exec-6] [o.t.c.r.TblInbodyRestController] - >>>>> reqHeaders: [user-agent:"PostmanRuntime/7.29.0", accept:"*/*", postman-token:"2054c02b-75a6-4df3-acad-cd74540cb672", host:"localhost:8088", accept-encoding:"gzip, deflate, br", connection:"keep-alive", content-length:"0"]
+2022-05-20 19:31:40,697 INFO  [http-nio-8088-exec-8] [o.t.c.r.TblInbodyRestController] - >>>>> reqHeaders: [host:"localhost:8088", connection:"keep-alive", content-length:"54", sec-ch-ua:"" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"", accept:"application/json, text/javascript, */*; q=0.01", content-type:"application/json; charset=UTF-8", x-requested-with:"XMLHttpRequest", sec-ch-ua-mobile:"?0", user-agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36", sec-ch-ua-platform:""macOS"", origin:"http://localhost:8088", sec-fetch-site:"same-origin", sec-fetch-mode:"cors", sec-fetch-dest:"empty", referer:"http://localhost:8088/v0.1/ajax/02", accept-encoding:"gzip, deflate, br", accept-language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", cookie:"_dd_s=logs=1&id=cbfe0d59-3153-4801-b0fd-0a4bc2237be9&created=1653038596326&expire=1653043599986"]
+2022-05-20 19:31:40,700 INFO  [http-nio-8088-exec-8] [o.t.c.r.TblInbodyRestController] - >>>>> reqBody1: {
+  "in1": "B001",
+  "in2": "한글",
+  "in3": "123"
+}
+2022-05-20 19:31:40,840 INFO  [http-nio-8088-exec-8] [o.t.c.r.TblInbodyRestController] - >>>>> lst: [{date=2022-05-20 19:22:27.906, bodyFatMass=8kg, bodyFatPercentage=15.5%, weight=52kg, id=1, muscleMass=24.4kg}, {date=2022-05-20 19:23:58.094, bodyFatMass=10kg, bodyFatPercentage=6%, weight=62kg, id=2, muscleMass=31kg}]
+2022-05-20 19:31:50,265 INFO  [http-nio-8088-exec-9] [o.t.c.r.TblInbodyRestController] - >>>>> reqHeaders: [host:"localhost:8088", connection:"keep-alive", content-length:"54", sec-ch-ua:"" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"", accept:"application/json, text/javascript, */*; q=0.01", content-type:"application/json; charset=UTF-8", x-requested-with:"XMLHttpRequest", sec-ch-ua-mobile:"?0", user-agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36", sec-ch-ua-platform:""macOS"", origin:"http://localhost:8088", sec-fetch-site:"same-origin", sec-fetch-mode:"cors", sec-fetch-dest:"empty", referer:"http://localhost:8088/v0.1/ajax/02", accept-encoding:"gzip, deflate, br", accept-language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", cookie:"_dd_s=logs=1&id=cbfe0d59-3153-4801-b0fd-0a4bc2237be9&created=1653038596326&expire=1653043610234"]
+2022-05-20 19:31:50,267 INFO  [http-nio-8088-exec-9] [o.t.c.r.TblInbodyRestController] - >>>>> reqBody1: {
+  "in1": "B001",
+  "in2": "한글",
+  "in3": "123"
+}
+2022-05-20 19:31:50,283 INFO  [http-nio-8088-exec-9] [o.t.c.r.TblInbodyRestController] - >>>>> lst: [{date=2022-05-20 19:22:27.906, bodyFatMass=8kg, bodyFatPercentage=15.5%, weight=52kg, id=1, muscleMass=24.4kg}, {date=2022-05-20 19:23:58.094, bodyFatMass=10kg, bodyFatPercentage=6%, weight=62kg, id=2, muscleMass=31kg}]
+2022-05-20 19:34:33,666 INFO  [RMI TCP Connection(37)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-05-20 19:34:33,749 INFO  [RMI TCP Connection(37)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 19:34:36,132 INFO  [main      ] [o.t.RestApiPractice10Application] - Starting RestApiPractice10Application using Java 1.8.0_321 on 192.168.nate.com with PID 2442 (/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-10-Inbody/bin/main started by hanlim_air in /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-10-Inbody)
+2022-05-20 19:34:36,134 INFO  [main      ] [o.t.RestApiPractice10Application] - The following 2 profiles are active: "proj-default", "proj-air"
+2022-05-20 19:34:36,822 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 19:34:36,842 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2022-05-20 19:34:37,544 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat initialized with port(s): 8088 (http)
+2022-05-20 19:34:37,565 INFO  [main      ] [o.a.c.core.StandardService    ] - Starting service [Tomcat]
+2022-05-20 19:34:37,565 INFO  [main      ] [o.a.c.core.StandardEngine     ] - Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-20 19:34:37,710 INFO  [main      ] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring embedded WebApplicationContext
+2022-05-20 19:34:37,710 INFO  [main      ] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1534 ms
+2022-05-20 19:34:37,929 INFO  [main      ] [o.s.b.a.h.H2ConsoleAutoConfiguration] - H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9092/inbodydb'
+2022-05-20 19:34:38,178 INFO  [main      ] [o.h.j.internal.util.LogHelper ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 19:34:38,211 INFO  [main      ] [org.hibernate.Version         ] - HHH000412: Hibernate ORM core version 5.6.8.Final
+2022-05-20 19:34:38,329 INFO  [main      ] [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-20 19:34:38,394 INFO  [main      ] [org.hibernate.dialect.Dialect ] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-20 19:34:38,668 INFO  [main      ] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-20 19:34:38,675 INFO  [main      ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 19:34:39,773 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat started on port(s): 8088 (http) with context path '/v0.1'
+2022-05-20 19:34:39,785 INFO  [main      ] [o.t.RestApiPractice10Application] - Started RestApiPractice10Application in 4.202 seconds (JVM running for 4.89)
+2022-05-20 19:34:48,614 INFO  [http-nio-8088-exec-1] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-20 19:34:48,615 INFO  [http-nio-8088-exec-1] [o.s.w.s.DispatcherServlet     ] - Initializing Servlet 'dispatcherServlet'
+2022-05-20 19:34:48,619 INFO  [http-nio-8088-exec-1] [o.s.w.s.DispatcherServlet     ] - Completed initialization in 4 ms
+2022-05-20 19:34:48,730 INFO  [http-nio-8088-exec-1] [o.t.controller.AjaxController ] - >>>>> id: 02
+2022-05-20 19:34:59,791 INFO  [http-nio-8088-exec-3] [o.t.c.r.TblInbodyRestController] - >>>>> reqHeaders: [host:"localhost:8088", connection:"keep-alive", content-length:"4", sec-ch-ua:"" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"", accept:"application/json, text/javascript, */*; q=0.01", content-type:"application/json; charset=UTF-8", x-requested-with:"XMLHttpRequest", sec-ch-ua-mobile:"?0", user-agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36", sec-ch-ua-platform:""macOS"", origin:"http://localhost:8088", sec-fetch-site:"same-origin", sec-fetch-mode:"cors", sec-fetch-dest:"empty", referer:"http://localhost:8088/v0.1/ajax/02", accept-encoding:"gzip, deflate, br", accept-language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", cookie:"_dd_s=logs=1&id=cbfe0d59-3153-4801-b0fd-0a4bc2237be9&created=1653038596326&expire=1653043790205"]
+2022-05-20 19:34:59,793 INFO  [http-nio-8088-exec-3] [o.t.c.r.TblInbodyRestController] - >>>>> reqBody1: null
+2022-05-20 19:34:59,880 INFO  [http-nio-8088-exec-3] [o.t.c.r.TblInbodyRestController] - >>>>> lst: [{date=2022-05-20 19:22:27.906, bodyFatMass=8kg, bodyFatPercentage=15.5%, weight=52kg, id=1, muscleMass=24.4kg}, {date=2022-05-20 19:23:58.094, bodyFatMass=10kg, bodyFatPercentage=6%, weight=62kg, id=2, muscleMass=31kg}]
+2022-05-20 19:36:38,038 INFO  [http-nio-8088-exec-6] [o.t.controller.AjaxController ] - >>>>> id: 02
+2022-05-20 19:36:39,019 INFO  [http-nio-8088-exec-8] [o.t.controller.AjaxController ] - >>>>> id: 02
+2022-05-20 19:39:08,773 INFO  [RMI TCP Connection(9)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-05-20 19:39:08,840 INFO  [RMI TCP Connection(9)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 19:39:10,620 INFO  [main      ] [o.t.RestApiPractice10Application] - Starting RestApiPractice10Application using Java 1.8.0_321 on 192.168.nate.com with PID 2489 (/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-10-Inbody/bin/main started by hanlim_air in /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-10-Inbody)
+2022-05-20 19:39:10,623 INFO  [main      ] [o.t.RestApiPractice10Application] - The following 2 profiles are active: "proj-default", "proj-air"
+2022-05-20 19:39:11,353 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 19:39:11,372 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2022-05-20 19:39:12,079 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat initialized with port(s): 8088 (http)
+2022-05-20 19:39:12,086 INFO  [main      ] [o.a.c.core.StandardService    ] - Starting service [Tomcat]
+2022-05-20 19:39:12,086 INFO  [main      ] [o.a.c.core.StandardEngine     ] - Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-20 19:39:12,241 INFO  [main      ] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring embedded WebApplicationContext
+2022-05-20 19:39:12,241 INFO  [main      ] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1579 ms
+2022-05-20 19:39:12,394 INFO  [main      ] [o.s.b.a.h.H2ConsoleAutoConfiguration] - H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9092/inbodydb'
+2022-05-20 19:39:12,668 INFO  [main      ] [o.h.j.internal.util.LogHelper ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 19:39:12,699 INFO  [main      ] [org.hibernate.Version         ] - HHH000412: Hibernate ORM core version 5.6.8.Final
+2022-05-20 19:39:12,819 INFO  [main      ] [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-20 19:39:12,882 INFO  [main      ] [org.hibernate.dialect.Dialect ] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-20 19:39:13,150 INFO  [main      ] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-20 19:39:13,156 INFO  [main      ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 19:39:14,279 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat started on port(s): 8088 (http) with context path '/v0.1'
+2022-05-20 19:39:14,307 INFO  [main      ] [o.t.RestApiPractice10Application] - Started RestApiPractice10Application in 4.245 seconds (JVM running for 4.813)
+2022-05-20 19:39:17,659 INFO  [http-nio-8088-exec-1] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-20 19:39:17,660 INFO  [http-nio-8088-exec-1] [o.s.w.s.DispatcherServlet     ] - Initializing Servlet 'dispatcherServlet'
+2022-05-20 19:39:17,663 INFO  [http-nio-8088-exec-1] [o.s.w.s.DispatcherServlet     ] - Completed initialization in 3 ms
+2022-05-20 19:39:17,770 INFO  [http-nio-8088-exec-1] [o.t.controller.AjaxController ] - >>>>> id: 02
+2022-05-20 19:39:20,013 INFO  [http-nio-8088-exec-2] [o.t.c.r.TblInbodyRestController] - >>>>> reqHeaders: [host:"localhost:8088", connection:"keep-alive", content-length:"4", sec-ch-ua:"" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"", accept:"application/json, text/javascript, */*; q=0.01", content-type:"application/json; charset=UTF-8", x-requested-with:"XMLHttpRequest", sec-ch-ua-mobile:"?0", user-agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36", sec-ch-ua-platform:""macOS"", origin:"http://localhost:8088", sec-fetch-site:"same-origin", sec-fetch-mode:"cors", sec-fetch-dest:"empty", referer:"http://localhost:8088/v0.1/ajax/02", accept-encoding:"gzip, deflate, br", accept-language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", cookie:"_dd_s=logs=1&id=cbfe0d59-3153-4801-b0fd-0a4bc2237be9&created=1653038596326&expire=1653043899104"]
+2022-05-20 19:39:20,015 INFO  [http-nio-8088-exec-2] [o.t.c.r.TblInbodyRestController] - >>>>> reqBody1: null
+2022-05-20 19:39:20,108 INFO  [http-nio-8088-exec-2] [o.t.c.r.TblInbodyRestController] - >>>>> lst: [{date=2022-05-20 19:22:27.906, bodyFatMass=8kg, bodyFatPercentage=15.5%, weight=52kg, id=1, muscleMass=24.4kg}, {date=2022-05-20 19:23:58.094, bodyFatMass=10kg, bodyFatPercentage=6%, weight=62kg, id=2, muscleMass=31kg}]
+2022-05-20 19:39:21,100 INFO  [http-nio-8088-exec-4] [o.t.controller.AjaxController ] - >>>>> id: 02
+2022-05-20 19:41:11,102 INFO  [RMI TCP Connection(4)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-05-20 19:41:11,157 INFO  [RMI TCP Connection(4)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 19:41:12,805 INFO  [main      ] [o.t.RestApiPractice10Application] - Starting RestApiPractice10Application using Java 1.8.0_321 on 192.168.nate.com with PID 2510 (/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-10-Inbody/bin/main started by hanlim_air in /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-10-Inbody)
+2022-05-20 19:41:12,807 INFO  [main      ] [o.t.RestApiPractice10Application] - The following 2 profiles are active: "proj-default", "proj-air"
+2022-05-20 19:41:13,492 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 19:41:13,508 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2022-05-20 19:41:14,153 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat initialized with port(s): 8088 (http)
+2022-05-20 19:41:14,161 INFO  [main      ] [o.a.c.core.StandardService    ] - Starting service [Tomcat]
+2022-05-20 19:41:14,161 INFO  [main      ] [o.a.c.core.StandardEngine     ] - Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-20 19:41:14,289 INFO  [main      ] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring embedded WebApplicationContext
+2022-05-20 19:41:14,289 INFO  [main      ] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1442 ms
+2022-05-20 19:41:14,507 INFO  [main      ] [o.s.b.a.h.H2ConsoleAutoConfiguration] - H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9092/inbodydb'
+2022-05-20 19:41:14,711 INFO  [main      ] [o.h.j.internal.util.LogHelper ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 19:41:14,734 INFO  [main      ] [org.hibernate.Version         ] - HHH000412: Hibernate ORM core version 5.6.8.Final
+2022-05-20 19:41:14,838 INFO  [main      ] [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-20 19:41:14,892 INFO  [main      ] [org.hibernate.dialect.Dialect ] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-20 19:41:15,106 INFO  [main      ] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-20 19:41:15,114 INFO  [main      ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 19:41:16,170 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat started on port(s): 8088 (http) with context path '/v0.1'
+2022-05-20 19:41:16,180 INFO  [main      ] [o.t.RestApiPractice10Application] - Started RestApiPractice10Application in 3.903 seconds (JVM running for 4.372)
+2022-05-20 19:41:21,068 INFO  [http-nio-8088-exec-1] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-20 19:41:21,068 INFO  [http-nio-8088-exec-1] [o.s.w.s.DispatcherServlet     ] - Initializing Servlet 'dispatcherServlet'
+2022-05-20 19:41:21,072 INFO  [http-nio-8088-exec-1] [o.s.w.s.DispatcherServlet     ] - Completed initialization in 3 ms
+2022-05-20 19:41:21,181 INFO  [http-nio-8088-exec-1] [o.t.controller.AjaxController ] - >>>>> id: 02
+2022-05-20 19:41:22,568 INFO  [http-nio-8088-exec-3] [o.t.c.r.TblInbodyRestController] - >>>>> reqHeaders: [host:"localhost:8088", connection:"keep-alive", content-length:"0", sec-ch-ua:"" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"", accept:"application/json, text/javascript, */*; q=0.01", content-type:"application/json; charset=utf-8", x-requested-with:"XMLHttpRequest", sec-ch-ua-mobile:"?0", user-agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36", sec-ch-ua-platform:""macOS"", origin:"http://localhost:8088", sec-fetch-site:"same-origin", sec-fetch-mode:"cors", sec-fetch-dest:"empty", referer:"http://localhost:8088/v0.1/ajax/02", accept-encoding:"gzip, deflate, br", accept-language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", cookie:"_dd_s=logs=1&id=cbfe0d59-3153-4801-b0fd-0a4bc2237be9&created=1653038596326&expire=1653044181629"]
+2022-05-20 19:41:22,571 INFO  [http-nio-8088-exec-3] [o.t.c.r.TblInbodyRestController] - >>>>> reqBody1: null
+2022-05-20 19:41:22,641 INFO  [http-nio-8088-exec-3] [o.t.c.r.TblInbodyRestController] - >>>>> lst: [{date=2022-05-20 19:22:27.906, bodyFatMass=8kg, bodyFatPercentage=15.5%, weight=52kg, id=1, muscleMass=24.4kg}, {date=2022-05-20 19:23:58.094, bodyFatMass=10kg, bodyFatPercentage=6%, weight=62kg, id=2, muscleMass=31kg}]
+2022-05-20 19:51:02,041 INFO  [RMI TCP Connection(13)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-05-20 19:51:02,106 INFO  [RMI TCP Connection(13)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 19:51:03,836 INFO  [main      ] [o.t.RestApiPractice10Application] - Starting RestApiPractice10Application using Java 1.8.0_321 on 192.168.nate.com with PID 2591 (/Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-10-Inbody/bin/main started by hanlim_air in /Users/hanlim_air/STS/Git/restApiPractice_Zotto/RestApiPractice-10-Inbody)
+2022-05-20 19:51:03,839 INFO  [main      ] [o.t.RestApiPractice10Application] - The following 2 profiles are active: "proj-default", "proj-air"
+2022-05-20 19:51:04,544 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-05-20 19:51:04,561 INFO  [main      ] [o.s.d.r.c.RepositoryConfigurationDelegate] - Finished Spring Data repository scanning in 10 ms. Found 0 JPA repository interfaces.
+2022-05-20 19:51:05,219 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat initialized with port(s): 8088 (http)
+2022-05-20 19:51:05,226 INFO  [main      ] [o.a.c.core.StandardService    ] - Starting service [Tomcat]
+2022-05-20 19:51:05,226 INFO  [main      ] [o.a.c.core.StandardEngine     ] - Starting Servlet engine: [Apache Tomcat/9.0.62]
+2022-05-20 19:51:05,354 INFO  [main      ] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring embedded WebApplicationContext
+2022-05-20 19:51:05,354 INFO  [main      ] [o.s.b.w.s.c.ServletWebServerApplicationContext] - Root WebApplicationContext: initialization completed in 1476 ms
+2022-05-20 19:51:05,571 INFO  [main      ] [o.s.b.a.h.H2ConsoleAutoConfiguration] - H2 console available at '/h2'. Database available at 'jdbc:h2:tcp://localhost:9092/inbodydb'
+2022-05-20 19:51:05,805 INFO  [main      ] [o.h.j.internal.util.LogHelper ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-05-20 19:51:05,834 INFO  [main      ] [org.hibernate.Version         ] - HHH000412: Hibernate ORM core version 5.6.8.Final
+2022-05-20 19:51:05,956 INFO  [main      ] [o.h.annotations.common.Version] - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-05-20 19:51:06,013 INFO  [main      ] [org.hibernate.dialect.Dialect ] - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-05-20 19:51:06,212 INFO  [main      ] [o.h.e.t.j.p.i.JtaPlatformInitiator] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-05-20 19:51:06,218 INFO  [main      ] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-05-20 19:51:07,283 INFO  [main      ] [o.s.b.w.e.t.TomcatWebServer   ] - Tomcat started on port(s): 8088 (http) with context path '/v0.1'
+2022-05-20 19:51:07,294 INFO  [main      ] [o.t.RestApiPractice10Application] - Started RestApiPractice10Application in 3.988 seconds (JVM running for 4.567)
+2022-05-20 19:51:12,010 INFO  [http-nio-8088-exec-1] [o.a.c.c.C.[.[.[/v0.1]         ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-20 19:51:12,011 INFO  [http-nio-8088-exec-1] [o.s.w.s.DispatcherServlet     ] - Initializing Servlet 'dispatcherServlet'
+2022-05-20 19:51:12,014 INFO  [http-nio-8088-exec-1] [o.s.w.s.DispatcherServlet     ] - Completed initialization in 3 ms
+2022-05-20 19:51:12,119 INFO  [http-nio-8088-exec-1] [o.t.controller.AjaxController ] - >>>>> id: 02
+2022-05-20 19:51:15,435 INFO  [http-nio-8088-exec-3] [o.t.c.r.TblInbodyRestController] - >>>>> reqHeaders: [host:"localhost:8088", connection:"keep-alive", content-length:"0", sec-ch-ua:"" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"", accept:"application/json, text/javascript, */*; q=0.01", content-type:"application/json; charset=utf-8", x-requested-with:"XMLHttpRequest", sec-ch-ua-mobile:"?0", user-agent:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36", sec-ch-ua-platform:""macOS"", origin:"http://localhost:8088", sec-fetch-site:"same-origin", sec-fetch-mode:"cors", sec-fetch-dest:"empty", referer:"http://localhost:8088/v0.1/ajax/02", accept-encoding:"gzip, deflate, br", accept-language:"ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7", cookie:"_dd_s=logs=1&id=cbfe0d59-3153-4801-b0fd-0a4bc2237be9&created=1653038596326&expire=1653044775373"]
+2022-05-20 19:51:15,437 INFO  [http-nio-8088-exec-3] [o.t.c.r.TblInbodyRestController] - >>>>> reqBody1: null
+2022-05-20 19:51:15,544 INFO  [http-nio-8088-exec-3] [o.t.c.r.TblInbodyRestController] - >>>>> lst: [{date=2022-05-20 19:22:27.906, bodyFatMass=8kg, bodyFatPercentage=15.5%, weight=52kg, id=1, muscleMass=24.4kg}, {date=2022-05-20 19:23:58.094, bodyFatMass=10kg, bodyFatPercentage=6%, weight=62kg, id=2, muscleMass=31kg}]
+2022-05-20 21:24:03,816 INFO  [RMI TCP Connection(86)-127.0.0.1] [o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin] - Application shutdown requested.
+2022-05-20 21:24:03,925 INFO  [RMI TCP Connection(86)-127.0.0.1] [o.s.o.j.LocalContainerEntityManagerFactoryBean] - Closing JPA EntityManagerFactory for persistence unit 'default'

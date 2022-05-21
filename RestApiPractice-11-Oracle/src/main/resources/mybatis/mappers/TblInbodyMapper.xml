@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.tain.mybatis.mappers.TblInbodyMapper">
+
+	<!-- selectAll -->
+	<select id="selectAll" parameterType="CamelMap" resultType="CamelMap">
+		select
+			id
+			, weight
+			, muscle_mass
+			, body_fat_mass
+			, body_fat_percentage
+			, date
+		from
+			tbl_inbody
+		where 1=1
+	</select>
+	
+	<!-- createTbl -->
+	<update id="createTbl" parameterType="CamelMap">
+		create table if not exists tbl_inbody
+		(
+			id                   bigint       not null auto_increment,
+			weight               		varchar(  20),
+			muscle_mass              	varchar(  20),
+			body_fat_mass               varchar(  20),
+			body_fat_percentage         varchar(  20),
+			date                      	timestamp		default current_timestamp
+		)
+	</update>
+	
+	<!-- deleteTbl -->
+	<update id="dropTbl" parameterType="CamelMap">
+		drop table tbl_inbody
+	</update>
+	
+</mapper>
