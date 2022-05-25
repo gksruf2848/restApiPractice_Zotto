@@ -29,7 +29,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	
 	implementation 'com.google.guava:guava:31.1-jre'
-	implementation 'com.oracle.ojdbc:ojdbc8'
+	implementation 'com.oracle.ojdbc:ojdbc7'
+	implementation fileTree(dir: 'libs', include: ['*.jar'])
 	
 }
 
